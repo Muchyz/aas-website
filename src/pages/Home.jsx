@@ -73,9 +73,9 @@ export default function Home() {
             return (
               <Link key={s.slug} to={`/services/${s.slug}`} className="card-surface overflow-hidden group">
                 <img
-                  src={`https://picsum.photos/seed/${s.slug}/500/280`}
+                  src={s.image}
                   alt={s.title}
-                  className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="p-7">
                   <div className="flex items-center gap-3 mb-4">

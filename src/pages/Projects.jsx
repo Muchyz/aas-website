@@ -2,15 +2,15 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
   const items = [
-    ["Bottling line retrofit", "PLC upgrade for a beverage plant's fill line, cut downtime significantly.", "Beverage"],
-    ["Warehouse panel rebuild", "Full distribution panel replacement for a logistics facility.", "Logistics"],
-    ["Cold-store automation", "Temperature control integration for a cold-chain storage facility.", "Cold chain"],
-    ["Bakery line controls", "Control system integration for a mid-size bakery's production line.", "Food production"],
-    ["Water treatment panel", "Panel build and wiring for a small water treatment installation.", "Water treatment"],
-    ["Textile plant maintenance", "Ongoing scheduled maintenance contract for a textile manufacturer.", "Textile"],
-    ["Genset changeover install", "Automatic mains-genset changeover panel for a manufacturing site with frequent outages.", "Manufacturing"],
-    ["SCADA dashboard rollout", "Remote monitoring dashboard for a multi-line production facility.", "Manufacturing"],
-    ["Motor control center build", "Custom MCC panel with DOL and VFD starters for a processing plant expansion.", "Processing"],
+    ["Bottling line retrofit", "PLC upgrade for a beverage plant's fill line, cut downtime significantly.", "Beverage", "bottling-line-retrofit.jpg"],
+    ["Warehouse panel rebuild", "Full distribution panel replacement for a logistics facility.", "Logistics", "warehouse-panel-rebuild.jpg"],
+    ["Cold-store automation", "Temperature control integration for a cold-chain storage facility.", "Cold chain", "cold-store-automation.jpg"],
+    ["Bakery line controls", "Control system integration for a mid-size bakery's production line.", "Food production", "bakery-line-controls.jpg"],
+    ["Water treatment panel", "Panel build and wiring for a small water treatment installation.", "Water treatment", "water-treatment-panel.jpg"],
+    ["Textile plant maintenance", "Ongoing scheduled maintenance contract for a textile manufacturer.", "Textile", "textile-plant-maintenance.jpg"],
+    ["Genset changeover install", "Automatic mains-genset changeover panel for a manufacturing site with frequent outages.", "Manufacturing", "genset-changeover-install.jpg"],
+    ["SCADA dashboard rollout", "Remote monitoring dashboard for a multi-line production facility.", "Manufacturing", "scada-dashboard-rollout.jpg"],
+    ["Motor control center build", "Custom MCC panel with DOL and VFD starters for a processing plant expansion.", "Processing", "motor-control-center-build.jpg"],
   ];
   return (
     <section className="container-page section-pad-sm">
@@ -20,10 +20,10 @@ export default function Projects() {
         A sample of the panel builds, retrofits, and maintenance contracts we've delivered across Kenya.
       </p>
       <div className="grid md:grid-cols-3 gap-6">
-        {items.map(([t, d, tag], i) => (
+        {items.map(([t, d, tag, img], i) => (
           <div key={i} className="card-surface overflow-hidden group">
             <div className="relative">
-              <img src={`https://picsum.photos/seed/project${i}/500/350`} alt={t} className="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src={`/projects/${img}`} alt={t} className="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
               <span className="absolute top-3 left-3 bg-white/90 backdrop-blur text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">
                 {tag}
               </span>

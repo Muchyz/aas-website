@@ -33,9 +33,9 @@ export const SERVICES = [
   {
     slug: "electrical-installations",
     title: "Electrical Installations & Services",
-    blurb: "Panel building, cabling, and testing done to a standard you can trust.",
+    blurb: "End-to-end electrical works and technical consultancy, from panel building and cable installation to safety audits, design reviews, and project commissioning, delivered to the standard your project and financiers expect.",
     icon: "Zap",
-    image: "https://picsum.photos/seed/aas-electrical/600/400",
+    image: "/services/electrical-installations.png",
     items: [
       "Low voltage switchboards and distribution panels",
       "Cable laying",
@@ -44,6 +44,13 @@ export const SERVICES = [
       "Insulation resistance test",
       "Earth resistance test",
       "Power quality analysis",
+      "Technical electrical safety audits",
+      "Technical design reviews",
+      "Power generation simulation for PPA-grade projects",
+      "Financial evaluations for power projects",
+      "Independent engineer and commissioning engineer services",
+      "Project management",
+      "Standard operating procedures aligned to regulatory and off-taker requirements",
     ],
   },
   {
@@ -51,7 +58,7 @@ export const SERVICES = [
     title: "Instrumentation",
     blurb: "Sensors and measurement equipment that keep your process visible.",
     icon: "Gauge",
-    image: "https://picsum.photos/seed/aas-instrumentation/600/400",
+    image: "/services/instrumentation.jpg",
     items: [
       "Temperature sensors",
       "Flow meters",
@@ -66,7 +73,7 @@ export const SERVICES = [
     title: "Product Supplies",
     blurb: "Components and equipment sourced right, from breakers to PLCs.",
     icon: "Package",
-    image: "https://picsum.photos/seed/aas-supplies/600/400",
+    image: "/services/product-supplies.jpg",
     items: [
       "MCB, MCCB, RCCB",
       "Relays",
@@ -82,9 +89,9 @@ export const SERVICES = [
   {
     slug: "control-automation",
     title: "Control & Automation",
-    blurb: "Full system integration, from lighting controls to SCADA.",
+    blurb: "Full control and automation system integration, backed by advanced power system studies that keep your network stable, compliant, and ready to scale.",
     icon: "Cpu",
-    image: "https://picsum.photos/seed/aas-automation/600/400",
+    image: "/services/control-automation.jpg",
     items: [
       "Lighting systems",
       "Building management systems",
@@ -94,6 +101,12 @@ export const SERVICES = [
       "Process automation",
       "Energy management systems",
       "Mains & genset changeover panels",
+      "Grid impact assessments and network data validation",
+      "Load flow and contingency analysis",
+      "Short-circuit and fault level studies",
+      "Dynamic and voltage stability assessments",
+      "Protection coordination reviews",
+      "Network reinforcement and reactive compensation recommendations",
     ],
   },
 ];
