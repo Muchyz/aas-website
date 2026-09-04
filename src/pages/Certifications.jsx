@@ -11,7 +11,7 @@ export default function Certifications() {
       <p className="tag-chip mb-3"><span className="tag-dot" /> Trust &amp; compliance</p>
       <h1 className="text-3xl font-bold text-navy mb-4">Certifications</h1>
       <div className="relative rounded-2xl overflow-hidden shadow-soft mb-12">
-        <img src="https://picsum.photos/seed/aas-cert/1200/400" alt="Panel inspection" className="w-full h-56 object-cover" />
+        <img src="/certifications-hero.png" alt="Panel inspection" className="w-full h-56 object-cover" />
       </div>
       <div className="grid md:grid-cols-3 gap-6">
         {items.map((it) => (

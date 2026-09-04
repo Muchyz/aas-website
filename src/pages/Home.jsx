@@ -40,7 +40,7 @@ export default function Home() {
 
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-soft-lg">
-              <img src="https://picsum.photos/seed/aas-panel/800/600" alt="Industrial control panel" className="w-full h-80 object-cover" />
+              <img src="/hero-panel.jpg" alt="Industrial control panel" className="w-full h-80 object-cover" />
             </div>
             <div className="glass-panel absolute -bottom-6 -left-6 rounded-xl px-5 py-4 hidden sm:flex items-center gap-3 max-w-[15rem]">
               <div className="w-10 h-10 rounded-lg bg-teal-500/15 flex items-center justify-center shrink-0">

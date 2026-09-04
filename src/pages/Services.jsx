@@ -32,7 +32,7 @@ export default function Services() {
                 className={`card-surface overflow-hidden flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} group`}
               >
                 <img
-                  src={`https://picsum.photos/seed/${s.slug}/600/280`}
+                  src={s.image}
                   alt={s.title}
                   className="w-full md:w-72 h-44 md:h-auto object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
                 />
