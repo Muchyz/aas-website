@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Sora", "Inter", sans-serif;
+  --color-navy: #0e2a47;
+  --color-brand: #1a63d6;
+  --color-brand-dark: #124a9e;
+  --color-sky: #2fa8e0;
+  --color-teal: #14b8a6;
+  --color-violet: #7c5cff;
+  --color-amber: #f59e0b;
+  --color-offwhite: #f7f9fb;
+  --color-line: #e7eaf0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #2b3440;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-brand), var(--color-brand-dark));
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+  font-size: 0.925rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  box-shadow: 0 10px 24px -8px rgba(26, 99, 214, 0.45);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -8px rgba(26, 99, 214, 0.55);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-navy);
+  color: var(--color-navy);
+  padding: 0.8rem 1.65rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+  font-size: 0.925rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.btn-outline:hover {
+  background-color: var(--color-navy);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ---------- Spacing rhythm ---------- */
+.section-pad {
+  padding: 5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-pad {
+    padding: 8rem 3rem;
+  }
+}
+
+.section-pad-sm {
+  padding: 3.5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-pad-sm {
+    padding: 5rem 3rem;
+  }
+}
+
+.container-page {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 3rem;
+  }
+}
+
+/* ---------- Decorative + surface utilities ---------- */
+.fingerprint-divider {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(90deg, var(--color-brand), var(--color-teal));
+  border-radius: 4px;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 24px -8px rgba(14, 42, 71, 0.10);
+}
+.shadow-soft-lg {
+  box-shadow: 0 24px 64px -18px rgba(14, 42, 71, 0.22);
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: color-mix(in srgb, var(--color-brand) 8%, white);
+  color: var(--color-brand-dark);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid color-mix(in srgb, var(--color-brand) 18%, white);
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(56px);
+  pointer-events: none;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-brand), var(--color-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card-surface {
+  background: white;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.card-surface:hover {
+  box-shadow: 0 20px 48px -16px rgba(14, 42, 71, 0.18);
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--color-brand) 30%, var(--color-line));
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+
+/* ---------- Floating glass + blueprint motif ---------- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 60px -20px rgba(14, 42, 71, 0.25);
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(26, 99, 214, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 99, 214, 0.07) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.blueprint-fade {
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 45%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 45%, transparent 100%);
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-brand-dark);
+}
+
+.tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-brand);
+}
+
+/* ---------- Filled icon tiles ---------- */
+.icon-tile-amber  { background: linear-gradient(135deg, #fbbf24, #d97706); }
+.icon-tile-sky    { background: linear-gradient(135deg, #38bdf8, #1a63d6); }
+.icon-tile-teal   { background: linear-gradient(135deg, #2dd4bf, #0d9488); }
+.icon-tile-violet { background: linear-gradient(135deg, #a78bfa, #6d28d9); }
