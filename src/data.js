@@ -392,7 +392,7 @@ export const BLOG_POSTS = [
     title: "What to check before signing an electrical installation contract",
     tag: "Electrical",
     tagColor: "text-rose-600 bg-rose-500/10",
-    image: "https://picsum.photos/seed/blog-contract/900/500",
+    image: "/blog/before-signing-electrical-installation-contract.jpg",
     content: [
       "An electrical installation contract is where problems either get prevented or get baked in for the rest of the project. A few checks before signing save a lot of disputes later.",
       "Confirm the contractor's licensing and certifications directly, not just their claim of having them. In Kenya this means checking current EPRA and relevant board registrations rather than taking a business card at face value.",
