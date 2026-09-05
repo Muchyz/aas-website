@@ -348,7 +348,7 @@ export const BLOG_POSTS = [
     title: "Choosing the right VFD for your motor application",
     tag: "Automation",
     tagColor: "text-sky-600 bg-sky-500/10",
-    image: "https://picsum.photos/seed/blog-vfd-choice/900/500",
+    image: "/blog/choosing-the-right-vfd.jpg",
     content: [
       "Picking a Variable Frequency Drive by matching its kW rating to the motor nameplate is the most common shortcut we see — and it's often wrong in ways that only show up after installation.",
       "Motor current, not just kW, should drive sizing. Two motors with the same kW rating can draw meaningfully different current depending on efficiency class and voltage, so the drive's rated output current needs to clear the motor's full-load amps with margin, not just match the kW label.",
@@ -363,7 +363,7 @@ export const BLOG_POSTS = [
     title: "SCADA vs manual monitoring: what actually changes on the plant floor",
     tag: "Automation",
     tagColor: "text-indigo-600 bg-indigo-500/10",
-    image: "https://picsum.photos/seed/blog-scada-manual/900/500",
+    image: "/blog/scada-vs-manual-monitoring.jpg",
     content: [
       "Manual monitoring — an operator walking rounds with a clipboard or checking gauges on a set schedule — has worked for decades, and for some small, single-line operations, it still works fine. The question is when it stops being enough.",
       "The biggest gap manual rounds leave is time between checks. If an issue develops between scheduled rounds, it runs unnoticed until the next check, however long that gap is. SCADA closes that gap to seconds, catching deviations as they start rather than after they've compounded.",
@@ -377,7 +377,7 @@ export const BLOG_POSTS = [
     title: "Instrumentation calibration: how often is often enough",
     tag: "Instrumentation",
     tagColor: "text-teal-600 bg-teal-500/10",
-    image: "https://picsum.photos/seed/blog-calibration/900/500",
+    image: "/blog/instrumentation-calibration-frequency.jpg",
     content: [
       "There's no single correct calibration interval that applies to every sensor — the right frequency depends on a combination of factors specific to each instrument and its application.",
       "Manufacturer specification is the starting point, not the final answer. Manufacturers publish a recommended interval based on typical drift characteristics, but 'typical' conditions rarely match every installation.",
