@@ -125,7 +125,7 @@ export default function Hero() {
               Free Quote <ArrowRight size={12} />
             </Link>
             <a
-              href="tel:+254700000000"
+              href="tel:+254794726207"
               className="flex-1 flex items-center justify-center gap-1 border border-white/30 bg-white/10 text-white font-semibold rounded-lg"
               style={{ padding: "9px 0", fontSize: "12px" }}
             >
