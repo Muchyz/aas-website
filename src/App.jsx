@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import Testimonials from "./pages/Testimonials";
 import Certifications from "./pages/Certifications";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/certifications" element={<Certifications />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
