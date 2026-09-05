@@ -1,29 +1,52 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
 
-const heroImages = ["/hero-panel.jpg"];
+const slides = [
+  {
+    image: "/hero-panel.jpg",
+    tag: "Advanced Automation Systems · Kenya",
+    heading: "Engineering,",
+    highlight: "Delivered.",
+    desc: "Electrical installations, instrumentation & full automation across Kenya — certified engineers, zero excuses.",
+  },
+  {
+    image: "/hero-pcb.jpg",
+    tag: "Precision Instrumentation",
+    heading: "Every Signal,",
+    highlight: "Accounted For.",
+    desc: "From PCB-level diagnostics to full control system builds — precision engineered, thoroughly tested.",
+  },
+  {
+    image: "/hero-control.jpg",
+    tag: "24/7 Emergency Response",
+    heading: "Downtime,",
+    highlight: "Eliminated.",
+    desc: "Fast turnaround on call-outs and installations so your production line never stalls.",
+  },
+];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (heroImages.length < 2) return;
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % heroImages.length);
+      setIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const slide = slides[index];
 
   return (
     <section className="relative overflow-hidden" style={{ height: "calc(100svh - 72px)" }}>
 
       <div className="absolute inset-0">
-        <AnimatePresence>
+        <AnimatePresence mode="sync">
           <motion.img
-            key={index}
-            src={heroImages[index]}
+            key={slide.image + index}
+            src={slide.image}
             alt="AAS industrial automation equipment"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: "center 60%" }}
@@ -44,7 +67,6 @@ export default function Hero() {
 
       <div className="relative z-10 h-full flex flex-col px-4 pt-3 pb-3">
 
-        {/* Badges — top */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -54,17 +76,17 @@ export default function Hero() {
           {["Certified & Compliant", "ISO-Aligned", "24/7 Support"].map((b) => (
             <span
               key={b}
-              className="bg-black/50 border border-white/20 text-white font-semibold px-2 py-0.5 rounded-full"
+              className="flex items-center gap-1 bg-black/50 border border-white/20 text-white font-semibold px-2 py-0.5 rounded-full"
               style={{ fontSize: "10px" }}
             >
-              ✓ {b}
+              <CheckCircle2 size={11} style={{ color: "var(--color-sky)" }} />
+              {b}
             </span>
           ))}
         </motion.div>
 
         <div className="flex-1" />
 
-        {/* CENTER content block — own dark backdrop for guaranteed contrast */}
         <div
           className="flex-shrink-0 flex flex-col gap-2 rounded-2xl"
           style={{
@@ -74,49 +96,41 @@ export default function Hero() {
             margin: "-14px -10px",
           }}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center gap-2"
-          >
-            <span className="w-5 h-[2px] flex-shrink-0" style={{ background: "var(--color-brand)" }} />
-            <span
-              className="font-bold uppercase tracking-widest"
-              style={{ fontSize: "9px", color: "var(--color-sky)" }}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-2"
             >
-              Advanced Automation Systems · Kenya
-            </span>
-          </motion.div>
+              <div className="flex items-center gap-2">
+                <span className="w-5 h-[2px] flex-shrink-0" style={{ background: "var(--color-brand)" }} />
+                <span
+                  className="font-bold uppercase tracking-widest"
+                  style={{ fontSize: "9px", color: "var(--color-sky)" }}
+                >
+                  {slide.tag}
+                </span>
+              </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.25 }}
-            className="font-extrabold text-white tracking-tight leading-none"
-            style={{ fontSize: "clamp(1.8rem, 8vw, 2.8rem)" }}
-          >
-            Engineering,<br />
-            <span style={{ color: "var(--color-sky)" }}>Delivered.</span>
-          </motion.h1>
+              <h1
+                className="font-extrabold text-white tracking-tight leading-none"
+                style={{ fontSize: "clamp(1.8rem, 8vw, 2.8rem)" }}
+              >
+                {slide.heading}
+                <br />
+                <span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span>
+              </h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-300 leading-snug"
-            style={{ fontSize: "11px" }}
-          >
-            Electrical installations, instrumentation &amp; full automation across Kenya
-            — certified engineers, zero excuses.
-          </motion.p>
+              <p className="text-gray-300 leading-snug" style={{ fontSize: "11px" }}>
+                {slide.desc}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.35 }}
-            className="flex gap-2"
-          >
+          <div className="flex gap-2">
             <Link
               to="/services"
               className="flex-1 flex items-center justify-center gap-1 text-white font-bold rounded-lg"
@@ -131,14 +145,9 @@ export default function Hero() {
             >
               <Phone size={12} /> Call Now
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="grid grid-cols-4 rounded-xl overflow-hidden border border-white/10"
-          >
+          <div className="grid grid-cols-4 rounded-xl overflow-hidden border border-white/10">
             {[
               { v: "4", l: "Solutions" },
               { v: "24/7", l: "Response" },
@@ -158,7 +167,23 @@ export default function Hero() {
                 </p>
               </div>
             ))}
-          </motion.div>
+          </div>
+
+          <div className="flex justify-center gap-1.5 pt-1">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className="rounded-full transition-all"
+                style={{
+                  width: i === index ? "18px" : "6px",
+                  height: "6px",
+                  background: i === index ? "var(--color-sky)" : "rgba(255,255,255,0.3)",
+                }}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="flex-1" />
