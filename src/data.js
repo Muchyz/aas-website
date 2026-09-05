@@ -183,7 +183,7 @@ export const SERVICES = [
     title: "Industrial Wireless Communication",
     blurb: "Reliable wireless links for monitoring and controlling remote sites without laying cable.",
     icon: "Radio",
-    image: "https://picsum.photos/seed/aas-wireless/800/600",
+    image: "/services/industrial-wireless-communication.jpg",
     longDescription: [
       "Not every site can be reached with cable. Remote pumping stations, tanks, and outlying equipment often sit kilometers from the nearest control room. Industrial wireless communication closes that gap.",
       "We deploy secure, reliable wireless systems that transmit both digital and analogue signals, including flow, pressure, level, and temperature, back to a central point, so your team has visibility without the cost of trenching cable across the site.",
@@ -203,7 +203,7 @@ export const SERVICES = [
     title: "Pump Monitoring Systems",
     blurb: "Catch pump and motor faults early, before they become costly failures.",
     icon: "Droplets",
-    image: "https://picsum.photos/seed/aas-pump-monitoring/800/600",
+    image: "/services/pump-monitoring-systems.jpg",
     longDescription: [
       "A large share of unplanned downtime comes from pumps and rotating equipment that fail without warning. Most maintenance schedules are either too early, wasting resources, or too late, after the damage is already done.",
       "Our pump monitoring solution tracks the active electrical power drawn by your pumps and motors in real time. Changes in that power signature reveal wear, blockages, or developing faults long before a full breakdown.",
@@ -222,7 +222,7 @@ export const SERVICES = [
     title: "Automated School Bell",
     blurb: "A synchronized, reliable bell system that keeps the school day running on time.",
     icon: "Bell",
-    image: "https://picsum.photos/seed/aas-school-bell/800/600",
+    image: "/services/automated-school-bell.jpg",
     longDescription: [
       "An automated bell system runs on your school's exact timetable, ringing precisely on schedule for every period, break, and assembly, with no need to rely on someone remembering to ring it manually.",
       "Ringing patterns are fully customizable, so class time, break time, and assembly can each have a distinct tone. A battery backup keeps the system working through power outages, and a mobile-triggered override lets administrators call an assembly from anywhere on campus.",
