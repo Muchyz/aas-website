@@ -1,5 +1,7 @@
-import { Target, Compass, Gem } from "lucide-react";
+import { Target, Compass, Gem, Rocket, Eye, ShieldCheck, Award, TrendingUp, Clock, Users, Layers, FileCheck2, BadgeCheck } from "lucide-react";
+import { motion } from "framer-motion";
 import SectionHeading from "../components/ui/SectionHeading";
+import { MISSION, VISION, STATS, CERTIFICATIONS } from "../data";
 
 const values = [
   { t: "Our mission", d: "Deliver automation and electrical systems that run reliably, safely, and without surprises.", icon: Target, tile: "icon-tile-amber" },
@@ -41,6 +43,133 @@ export default function About() {
               <p className="text-navy font-semibold text-sm">A crew that stays accountable</p>
               <p className="text-gray-600 text-xs mt-1">Same technicians who scope the job see it through to commissioning.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-t" style={{ borderColor: "rgba(37,99,235,0.3)" }}>
+        <div className="absolute inset-0" style={{ background: "linear-gradient(160deg, #0a1128 0%, #0f1c3f 45%, #0a1128 100%)" }} />
+        <div
+          className="absolute inset-0 opacity-[0.15] pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.4) 1px, transparent 1px)",
+            backgroundSize: "48px 48px",
+          }}
+        />
+        <div className="absolute -top-32 left-1/3 w-[30rem] h-[30rem] rounded-full opacity-[0.09] blur-3xl pointer-events-none" style={{ background: "#2563eb" }} />
+        <div className="absolute bottom-0 right-0 w-[24rem] h-[24rem] rounded-full opacity-[0.07] blur-3xl pointer-events-none" style={{ background: "#0ea5e9" }} />
+
+        <div className="container-page relative section-pad-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-xl mx-auto mb-14"
+          >
+            <p className="inline-flex items-center gap-2 mb-5 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest"
+               style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)", color: "var(--color-sky)" }}>
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--color-sky)" }} />
+              Our Foundation
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Mission &amp; Vision</h2>
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "3.5rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="h-0.5 mx-auto mt-5 bg-blue-500"
+            />
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-14">
+            {[
+              { icon: Rocket, label: "Mission", text: MISSION },
+              { icon: Eye, label: "Vision", text: VISION },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                whileHover={{ y: -6, borderColor: "rgba(47,168,224,0.4)" }}
+                className="relative rounded-2xl p-7 backdrop-blur-md overflow-hidden group"
+                style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.14)" }}
+              >
+                <div
+                  className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"
+                  style={{ background: "var(--color-sky)" }}
+                />
+                <div className="relative">
+                  <motion.div
+                    whileHover={{ rotate: 8, scale: 1.08 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+                    style={{ background: "rgba(47,168,224,0.15)" }}
+                  >
+                    <item.icon size={20} style={{ color: "var(--color-sky)" }} />
+                  </motion.div>
+                  <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--color-sky)" }}>{item.label}</p>
+                  <p className="text-white/80 leading-relaxed">{item.text}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+            {STATS.map((s, i) => {
+              const icons = [Layers, Clock, Users, TrendingUp];
+              const StatIcon = icons[i % icons.length];
+              return (
+                <motion.div
+                  key={s.l}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  whileHover={{ y: -5, scale: 1.03 }}
+                  className="rounded-xl px-5 py-6 text-center backdrop-blur-md"
+                  style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
+                >
+                  <StatIcon size={18} className="mx-auto mb-2.5" style={{ color: "var(--color-sky)" }} />
+                  <div className="text-2xl md:text-3xl font-bold text-white tracking-tight">{s.v}</div>
+                  <div className="text-[0.7rem] md:text-xs text-white/55 mt-1.5 uppercase tracking-wide">{s.l}</div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-6"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-white/40">Certifications &amp; Compliance</p>
+          </motion.div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {CERTIFICATIONS.map((c, i) => {
+              const icons = [ShieldCheck, BadgeCheck, FileCheck2, Award];
+              const CertIcon = icons[i % icons.length];
+              return (
+                <motion.span
+                  key={c}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  whileHover={{ y: -3, borderColor: "rgba(47,168,224,0.5)" }}
+                  className="flex items-center gap-2 backdrop-blur-md px-4 py-2.5 rounded-full text-sm font-medium text-white"
+                  style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.16)" }}
+                >
+                  <CertIcon size={15} style={{ color: "var(--color-sky)" }} />
+                  {c}
+                </motion.span>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -123,3 +123,21 @@ export const VALUES = [
   { t: "Innovation", d: "Creative engineering solutions, not just the standard fix." },
   { t: "Quality", d: "Work built to run reliably long after we've left site." },
 ];
+
+export const MISSION = "To deliver innovative, reliable, and safety-driven electrical, automation, and instrumentation solutions that empower industries across Kenya to operate at peak efficiency.";
+
+export const VISION = "To be East Africa's most trusted partner for industrial automation and electrical engineering — recognized for precision, integrity, and forward-thinking solutions.";
+
+export const STATS = [
+  { v: "150+", l: "Projects Completed" },
+  { v: "9+", l: "Years of Experience" },
+  { v: "60+", l: "Satisfied Clients" },
+  { v: "8+", l: "Sectors Served" },
+];
+
+export const CERTIFICATIONS = [
+  "EPRA-Aligned Practice",
+  "EBK & IEK Standards",
+  "ISO-Aligned Safety Systems",
+  "NCA-Compliant Installations",
+];
