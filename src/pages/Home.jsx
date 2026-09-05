@@ -4,6 +4,7 @@ import { SERVICES, VALUES, PROCESS } from "../data";
 import WhatsAppButton from "../components/WhatsAppButton";
 import WhyChooseUs from "../components/sections/WhyChooseUs";
 import SectorsServed from "../components/sections/SectorsServed";
+import Hero from "../components/sections/Hero";
 
 const ICONS = { Zap, Gauge, Package, Cpu };
 const ACCENTS = {
@@ -16,46 +17,7 @@ const ACCENTS = {
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 blueprint-grid blueprint-fade pointer-events-none" />
-        <div className="glow-orb w-[28rem] h-[28rem] -top-40 -right-20 opacity-[0.14]" style={{ background: "#1a63d6" }} />
-        <div className="glow-orb w-72 h-72 top-1/2 -left-16 opacity-[0.10]" style={{ background: "#2fa8e0" }} />
-
-        <div className="container-page relative pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="tag-chip mb-5"><span className="tag-dot" /> Advanced Automation Systems</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy leading-[1.1]">
-              Engineering that keeps running long after we've left site.
-            </h1>
-            <p className="mt-6 max-w-md text-gray-600 text-lg">
-              Electrical installations, instrumentation, product supply and full control &amp; automation
-              for factories and plants across Kenya.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <WhatsAppButton />
-              <Link to="/projects" className="btn-outline">
-                View our work <ArrowUpRight size={16} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-soft-lg">
-              <img src="/hero-panel.jpg" alt="Industrial control panel" className="w-full h-80 object-cover" />
-            </div>
-            <div className="glass-panel absolute -bottom-6 -left-6 rounded-xl px-5 py-4 hidden sm:flex items-center gap-3 max-w-[15rem]">
-              <div className="w-10 h-10 rounded-lg bg-teal-500/15 flex items-center justify-center shrink-0">
-                <CheckCircle2 className="text-teal-600" size={20} />
-              </div>
-              <div>
-                <p className="text-navy font-semibold text-sm leading-tight">Same-day response</p>
-                <p className="text-gray-500 text-xs mt-0.5">on urgent call-outs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Services */}
       <section className="container-page section-pad-sm">
