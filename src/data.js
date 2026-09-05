@@ -114,7 +114,7 @@ export const SERVICES = [
     title: "Consulting",
     blurb: "Expert guidance before, during, and after your project — hourly consultation, diagnostics, and turnkey engineering design.",
     icon: "MessageSquare",
-    image: "https://picsum.photos/seed/aas-consulting/800/600",
+    image: "/services/consulting.jpg",
     items: [
       "Diagnostics and troubleshooting services",
       "Application design",
@@ -128,7 +128,7 @@ export const SERVICES = [
     title: "Power Quality Analysis",
     blurb: "Energy data logging and power quality analysis to optimize efficiency, sizing, and long-term system performance.",
     icon: "Activity",
-    image: "https://picsum.photos/seed/aas-power-quality/800/600",
+    image: "/services/power-quality-analysis.jpg",
     items: [
       "Active power consumption (kW) monitoring",
       "Apparent power (kVA) analysis",
