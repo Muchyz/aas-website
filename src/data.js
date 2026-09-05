@@ -289,7 +289,7 @@ export const BLOG_POSTS = [
     title: "Signs your control panel needs attention before it fails",
     tag: "Maintenance",
     tagColor: "text-amber-500 bg-amber-500/10",
-    image: "https://picsum.photos/seed/blog-panel/900/500",
+    image: "/blog/signs-your-control-panel-needs-attention.jpg",
     content: [
       "Most control panel failures don't happen out of nowhere. There are usually warning signs weeks or months before a breakdown — the challenge is that they're easy to miss if nobody is looking for them.",
       "Discoloured or heat-stained components inside the panel are one of the clearest signs. Overheating leaves visible marks on terminals, breakers, and wiring insulation long before anything actually fails. If you open a panel and see browning or a faint burnt smell, that's not cosmetic — it's a fault developing in real time.",
