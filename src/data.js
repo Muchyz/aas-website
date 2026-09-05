@@ -143,7 +143,7 @@ export const SERVICES = [
     title: "SCADA",
     blurb: "Real-time visibility and control of your process, accessible from the control room or from anywhere in the field.",
     icon: "Monitor",
-    image: "https://picsum.photos/seed/aas-scada/800/600",
+    image: "/services/scada.jpg",
     longDescription: [
       "SCADA — Supervisory Control and Data Acquisition — gives you a live window into your process. It combines networked communication with graphical Human Machine Interfaces (HMIs) to bring high-level supervisory control to plant operators, wherever they're stationed.",
       "Our SCADA systems talk directly to your PLCs and field instruments, pulling data in real time and logging it for later analysis. Every reading, alarm, and trend is available on-screen, so your team can spot a problem before it becomes downtime.",
@@ -163,7 +163,7 @@ export const SERVICES = [
     title: "Variable Frequency Drives",
     blurb: "Precise motor speed and torque control that cuts energy waste and extends equipment life.",
     icon: "Waves",
-    image: "https://picsum.photos/seed/aas-vfd/800/600",
+    image: "/services/variable-frequency-drives.jpg",
     longDescription: [
       "A Variable Frequency Drive is the most efficient way to control a three-phase AC induction motor, matching speed and torque to the actual demand of your process instead of running flat-out all the time.",
       "We design, supply, install, and commission VFD systems for fans, pumps, conveyors, and other rotating equipment. Done right, this cuts energy costs, reduces mechanical wear, and gives you far more control over how your machinery behaves.",
