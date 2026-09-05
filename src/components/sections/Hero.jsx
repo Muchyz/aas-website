@@ -4,7 +4,7 @@ import Button from "../ui/Button";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[92vh] flex items-center">
+    <section className="relative overflow-hidden h-[100svh] flex items-center">
       {/* background image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -19,96 +19,77 @@ export default function Hero() {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "linear-gradient(100deg, rgba(10,20,35,0.94) 0%, rgba(10,20,35,0.82) 32%, rgba(10,20,35,0.45) 60%, rgba(10,20,35,0.15) 100%)",
+            "linear-gradient(100deg, rgba(8,17,30,0.96) 0%, rgba(8,17,30,0.86) 30%, rgba(8,17,30,0.5) 62%, rgba(8,17,30,0.2) 100%)",
         }}
       />
       <div
         className="absolute inset-0 z-0"
         style={{
-          background:
-            "linear-gradient(to top, rgba(10,20,35,0.85) 0%, transparent 35%)",
+          background: "linear-gradient(to top, rgba(8,17,30,0.95) 0%, transparent 40%)",
         }}
       />
 
       {/* faint grid on top of image, brand-tinted */}
       <div
-        className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
+        className="absolute inset-0 z-0 opacity-[0.12] pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(to right, rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.4) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "linear-gradient(to right, black, transparent 70%)",
-          WebkitMaskImage: "linear-gradient(to right, black, transparent 70%)",
+          backgroundSize: "48px 48px",
+          maskImage: "linear-gradient(to right, black, transparent 65%)",
+          WebkitMaskImage: "linear-gradient(to right, black, transparent 65%)",
         }}
       />
 
-      <div className="section-pad relative z-10 container-page w-full">
-        <div className="max-w-2xl">
+      <div className="relative z-10 container-page w-full px-6">
+        <div className="max-w-xl">
           <span
-            className="inline-flex items-center gap-2 mb-7 px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-md"
+            className="inline-flex items-center gap-2 mb-4 px-3.5 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md"
             style={{
               background: "rgba(255,255,255,0.08)",
               border: "1px solid rgba(255,255,255,0.18)",
               color: "#e8f0fe",
             }}
           >
-            <Zap size={14} style={{ color: "var(--color-sky)" }} /> Advanced Automation Systems
+            <Zap size={12} style={{ color: "var(--color-sky)" }} /> Advanced Automation Systems
           </span>
 
-          <h1 className="text-[2.6rem] md:text-[3.75rem] font-bold text-white leading-[1.04] tracking-tight">
-            Engineering systems
-            <br />
+          <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.4rem] font-bold text-white leading-[1.15] md:leading-[1.08] tracking-tight">
+            Engineering systems{" "}
             <span style={{ color: "var(--color-sky)" }}>that run themselves</span>.
           </h1>
 
-          <p className="mt-7 text-white/75 text-lg max-w-lg leading-relaxed">
+          <p className="mt-4 text-white/70 text-sm md:text-base max-w-md leading-relaxed">
             Electrical installations, instrumentation, product supply, and full control
-            &amp; automation for factories and plants across Kenya — delivered with
-            precision, accountability, and zero excuses.
+            &amp; automation for factories and plants across Kenya.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
             <WhatsAppButton />
             <Button
               to="/services"
               variant="outline"
-              className="!border-white/30 !text-white hover:!bg-white/10"
+              className="!border-white/30 !text-white hover:!bg-white/10 !text-sm !px-4 !py-2.5"
             >
-              View Our Services <ArrowUpRight size={16} className="inline ml-1" />
+              View Our Services <ArrowUpRight size={15} className="inline ml-1" />
             </Button>
           </div>
 
-          <div className="mt-11 flex flex-wrap gap-x-7 gap-y-3">
-            {["ISO-aligned safety practice", "Kenya-wide project coverage", "Same-day response"].map((t) => (
-              <span key={t} className="flex items-center gap-2 text-sm text-white/70">
-                <CheckCircle2 size={16} style={{ color: "var(--color-sky)" }} />
+          <div className="mt-6 md:mt-8 flex flex-wrap gap-x-5 gap-y-2">
+            {["ISO-aligned safety", "Kenya-wide coverage", "Same-day response"].map((t) => (
+              <span key={t} className="flex items-center gap-1.5 text-xs text-white/60">
+                <CheckCircle2 size={13} style={{ color: "var(--color-sky)" }} />
                 {t}
               </span>
             ))}
           </div>
         </div>
+      </div>
 
-        {/* stat strip anchored bottom, glassy card */}
-        <div className="mt-16 md:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
-          {[
-            { n: "4", l: "Core Solution Areas" },
-            { n: "24/7", l: "Emergency Response" },
-            { n: "100%", l: "Kenya-Wide Coverage" },
-            { n: "Same-Day", l: "Quote Turnaround" },
-          ].map((s) => (
-            <div
-              key={s.l}
-              className="rounded-xl px-5 py-4 backdrop-blur-md"
-              style={{
-                background: "rgba(255,255,255,0.07)",
-                border: "1px solid rgba(255,255,255,0.14)",
-              }}
-            >
-              <div className="text-xl md:text-2xl font-bold text-white tracking-tight">{s.n}</div>
-              <div className="text-[0.7rem] md:text-xs text-white/60 mt-1 leading-snug">{s.l}</div>
-            </div>
-          ))}
-        </div>
+      {/* scroll hint */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-white/40">
+        <span className="text-[0.65rem] uppercase tracking-[0.15em]">Scroll</span>
+        <span className="w-px h-8 bg-white/30" />
       </div>
     </section>
   );
