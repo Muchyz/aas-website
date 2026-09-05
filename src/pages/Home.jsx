@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
-import { Zap, Gauge, Package, Cpu, ChevronRight, ArrowUpRight, Quote, CheckCircle2 } from "lucide-react";
+import { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell, ChevronRight, ArrowUpRight, Quote, CheckCircle2 } from "lucide-react";
 import { SERVICES, VALUES, PROCESS } from "../data";
 import WhatsAppButton from "../components/WhatsAppButton";
 import WhyChooseUs from "../components/sections/WhyChooseUs";
 import SectorsServed from "../components/sections/SectorsServed";
 import Hero from "../components/sections/Hero";
 
-const ICONS = { Zap, Gauge, Package, Cpu };
+const ICONS = { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell };
 const ACCENTS = {
   Zap: { tile: "amber", text: "text-amber-500" },
   Gauge: { tile: "teal", text: "text-teal-600" },
   Package: { tile: "violet", text: "text-violet-600" },
   Cpu: { tile: "sky", text: "text-sky-600" },
+  MessageSquare: { tile: "rose", text: "text-rose-600" },
+  Activity: { tile: "emerald", text: "text-emerald-600" },
+  Monitor: { tile: "indigo", text: "text-indigo-600" },
+  Waves: { tile: "orange", text: "text-orange-600" },
+  Radio: { tile: "cyan", text: "text-cyan-600" },
+  Droplets: { tile: "fuchsia", text: "text-fuchsia-600" },
+  Bell: { tile: "lime", text: "text-lime-600" },
 };
 
 export default function Home() {
