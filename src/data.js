@@ -267,3 +267,17 @@ export const CERTIFICATIONS = [
   "ISO-Aligned Safety Systems",
   "NCA-Compliant Installations",
 ];
+
+export const RELATED_SERVICES = {
+  "electrical-installations": ["control-automation", "power-quality-analysis"],
+  "instrumentation": ["pump-monitoring-systems", "power-quality-analysis"],
+  "product-supplies": ["variable-frequency-drives", "scada"],
+  "control-automation": ["scada", "variable-frequency-drives"],
+  "consulting": ["electrical-installations", "control-automation"],
+  "power-quality-analysis": ["electrical-installations", "instrumentation"],
+  "scada": ["control-automation", "product-supplies"],
+  "variable-frequency-drives": ["product-supplies", "control-automation"],
+  "industrial-wireless-communication": ["pump-monitoring-systems", "instrumentation"],
+  "pump-monitoring-systems": ["instrumentation", "industrial-wireless-communication"],
+  "automated-school-bell": ["control-automation", "consulting"],
+};

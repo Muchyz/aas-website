@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { CheckCircle2, ArrowLeft, Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell } from "lucide-react";
-import { SERVICES } from "../data";
+import { CheckCircle2, ArrowLeft, ArrowUpRight, Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell } from "lucide-react";
+import { SERVICES, RELATED_SERVICES } from "../data";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const ICONS = { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell };
@@ -24,6 +24,7 @@ export default function ServiceDetail() {
   if (!service) return <Navigate to="/services" replace />;
   const Icon = ICONS[service.icon];
   const a = ACCENTS[service.icon];
+  const related = SERVICES.filter((s) => s.slug !== service.slug);
 
   return (
     <section className="max-w-4xl mx-auto section-pad-sm">
@@ -59,6 +60,42 @@ export default function ServiceDetail() {
             </div>
           ))}
         </div>
+        {related.length > 0 && (
+          <div className="mt-14">
+            <h3 className="text-navy font-bold mb-4">Related services</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {related.map((r) => {
+                const RIcon = ICONS[r.icon];
+                const ra = ACCENTS[r.icon];
+                return (
+                  <Link
+                    key={r.slug}
+                    to={`/services/${r.slug}`}
+                    className="card-surface overflow-hidden group flex"
+                  >
+                    <img
+                      src={r.image}
+                      alt={r.title}
+                      className="w-28 shrink-0 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="p-4 flex flex-col justify-center">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className={`w-8 h-8 rounded-xl icon-tile-${ra.tile} shadow-soft flex items-center justify-center shrink-0`}>
+                          <RIcon className="text-white" size={16} />
+                        </div>
+                        <h4 className="text-sm font-bold text-navy">{r.title}</h4>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-brand text-xs font-medium">
+                        View <ArrowUpRight size={12} />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         <div className="mt-10"><WhatsAppButton /></div>
       </div>
     </section>
