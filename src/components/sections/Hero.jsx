@@ -31,6 +31,14 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    // preload all slide images so switching is instant, no pop-in
+    slides.forEach((s) => {
+      const img = new Image();
+      img.src = s.image;
+    });
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 5000);
