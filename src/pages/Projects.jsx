@@ -23,7 +23,7 @@ export default function Projects() {
         {items.map(([t, d, tag, img], i) => (
           <div key={i} className="card-surface overflow-hidden group">
             <div className="relative">
-              <img src={`/projects/${img}`} alt={t} className="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <img src={`https://picsum.photos/seed/project${i}/500/300`} alt={t} className="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300" />
               <span className="absolute top-3 left-3 bg-white/90 backdrop-blur text-brand-dark text-xs font-semibold px-2.5 py-1 rounded-full">
                 {tag}
               </span>
