@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Zap, Gauge, Package, Cpu, ChevronRight, ArrowUpRight, Quote, CheckCircle2 } from "lucide-react";
 import { SERVICES, VALUES, PROCESS } from "../data";
 import WhatsAppButton from "../components/WhatsAppButton";
+import WhyChooseUs from "../components/sections/WhyChooseUs";
+import SectorsServed from "../components/sections/SectorsServed";
 
 const ICONS = { Zap, Gauge, Package, Cpu };
 const ACCENTS = {
@@ -94,6 +96,9 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      <WhyChooseUs />
+      <SectorsServed />
 
       {/* Process */}
       <section className="bg-offwhite">
