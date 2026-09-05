@@ -304,7 +304,7 @@ export const BLOG_POSTS = [
     title: "What a PLC retrofit actually involves",
     tag: "Automation",
     tagColor: "text-sky-600 bg-sky-500/10",
-    image: "https://picsum.photos/seed/blog-plc/900/500",
+    image: "/blog/what-a-plc-retrofit-actually-involves.jpg",
     content: [
       "A PLC retrofit sounds like a simple swap — old controller out, new one in — but in practice it's closer to a small engineering project than a parts replacement.",
       "It starts with understanding the existing system fully. Before anything is touched, we document the current program logic, I/O wiring, and any quirks operators have learned to work around over the years. Old systems often carry undocumented logic changes made during past emergencies, and losing that knowledge during a retrofit is how new problems get introduced.",
@@ -319,7 +319,7 @@ export const BLOG_POSTS = [
     title: "Getting maintenance contracts right for multi-shift plants",
     tag: "Case study",
     tagColor: "text-violet-600 bg-violet-500/10",
-    image: "https://picsum.photos/seed/blog-maintenance/900/500",
+    image: "/blog/maintenance-contracts-for-multi-shift-plants.jpg",
     content: [
       "Plants running two or three shifts face a maintenance problem single-shift operations don't: there's rarely a clean window when the line is actually stopped and safe to work on.",
       "The first adjustment is scheduling. A maintenance contract built around a standard business-hours service window doesn't fit a plant that's running at 2am. Response times, call-out availability, and even routine inspection slots need to be structured around the plant's actual production calendar, not a generic business day.",
@@ -334,7 +334,7 @@ export const BLOG_POSTS = [
     title: "Why power quality analysis matters before you install solar",
     tag: "Power Quality",
     tagColor: "text-emerald-600 bg-emerald-500/10",
-    image: "https://picsum.photos/seed/blog-solar-pq/900/500",
+    image: "/blog/power-quality-analysis-before-solar.jpg",
     content: [
       "It's tempting to treat solar sizing as a simple math problem: add up your loads, add some margin, and order panels and an inverter to match. In practice, the electrical environment you're feeding into matters just as much as the load total.",
       "Voltage fluctuations and existing harmonic distortion on site can affect how well an inverter synchronizes with your supply, and in some cases can trigger nuisance trips or reduce inverter lifespan. A power quality audit before installation catches this while it's still cheap to address.",
