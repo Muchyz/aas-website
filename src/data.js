@@ -57,7 +57,7 @@ export const SERVICES = [
     icon: "Gauge",
     image: "/services/instrumentation.jpg",
     items: [
-      { name: "Temperature sensors", image: "/services/instrumentation/temperature-sensors.svg", description: "Accurate temperature monitoring for process and environmental control." },
+      { name: "Temperature sensors", image: "/services/instrumentation/temperature-sensors.jpg", description: "Accurate temperature monitoring for process and environmental control." },
       { name: "Flow meters", image: "/services/instrumentation/flow-meters.svg", description: "Precise measurement of liquid and gas flow rates across your process." },
       { name: "Level sensors", image: "/services/instrumentation/level-sensors.svg", description: "Reliable tank and vessel level detection for inventory and safety." },
       { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.svg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
