@@ -160,16 +160,35 @@ export default function About() {
 
       {/* STATS — full-bleed dark strip beneath the quote blocks */}
       <div className="relative w-screen overflow-hidden" style={{ marginLeft: "calc(50% - 50vw)", background: "#0a1a35" }}>
-        <div className="container-page py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:divide-x md:divide-white/10">
+        <div
+          className="absolute right-8 md:right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full pointer-events-none"
+          style={{
+            border: "1px solid rgba(255,255,255,0.06)",
+            boxShadow: "0 0 0 24px rgba(255,255,255,0.03), 0 0 0 48px rgba(255,255,255,0.02)",
+          }}
+        />
+        <div className="container-page relative py-8 md:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/10">
             {STATS.map((s, i) => {
               const icons = [Layers, Clock, Users, TrendingUp];
               const StatIcon = icons[i % icons.length];
+              const isRightEdge = i % 2 === 1;
               return (
-                <div key={s.l} className="md:pl-8 first:md:pl-0">
-                  <StatIcon size={18} className="mb-3" style={{ color: "#38bdf8" }} />
-                  <div className="text-2xl md:text-3xl font-bold text-white leading-none">{s.v}</div>
-                  <div className="text-xs text-white/50 mt-1.5">{s.l}</div>
+                <div
+                  key={s.l}
+                  className={`px-4 py-4 md:px-6 md:py-0 first:pl-0 last:md:pr-0 flex items-center gap-3 ${isRightEdge ? "md:border-r-0" : ""}`}
+                  style={isRightEdge ? { borderRightWidth: 0 } : {}}
+                >
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
+                    style={{ background: "rgba(255,255,255,0.06)" }}
+                  >
+                    <StatIcon size={15} style={{ color: "#38bdf8" }} />
+                  </div>
+                  <div>
+                    <div className="text-xl md:text-2xl font-bold text-white leading-none tracking-tight">{s.v}</div>
+                    <div className="text-[0.65rem] text-white/50 mt-1 uppercase tracking-wide">{s.l}</div>
+                  </div>
                 </div>
               );
             })}
@@ -224,14 +243,14 @@ export default function About() {
       </div>
 
       {/* MILESTONES */}
-      <div className="container-page py-16 md:py-20 pb-24">
+      <div className="container-page py-16 md:py-20 pb-0">
         <SectionHeading eyebrow="Our story" title="Milestones" align="left" />
         <div className="max-w-2xl relative">
           <div
             className="absolute left-6 top-2 bottom-2 w-px"
             style={{ background: "linear-gradient(to bottom, #2563eb, rgba(37,99,235,0.1))" }}
           />
-          <div className="space-y-12">
+          <div className="space-y-7">
             {milestones.map(([t, d], i) => (
               <motion.div
                 key={t}
@@ -239,23 +258,28 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="relative flex gap-6"
+                className="relative flex gap-5"
               >
                 <div
                   className="relative shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm"
-                  style={{ background: "#0a1a35", color: "#38bdf8", boxShadow: "0 0 0 4px #ffffff" }}
+                  style={{
+                    background: "#0a1a35",
+                    color: "#38bdf8",
+                    boxShadow: "0 0 0 4px #ffffff, 0 0 14px rgba(37,99,235,0.5)",
+                  }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <div className="pt-2">
                   <div className="text-navy font-semibold text-lg">{t}</div>
-                  <div className="text-gray-600 text-sm mt-1.5 max-w-md leading-relaxed">{d}</div>
+                  <div className="text-gray-600 text-sm mt-1 max-w-md leading-relaxed">{d}</div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
+
     </div>
   );
 }
