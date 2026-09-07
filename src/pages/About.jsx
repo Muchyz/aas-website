@@ -1,4 +1,4 @@
-import { Target, Compass, Gem, Rocket, Eye, ShieldCheck, Award, TrendingUp, Clock, Users, Layers, FileCheck2, BadgeCheck } from "lucide-react";
+import { Target, Compass, Gem, Rocket, Quote, Eye, ShieldCheck, Award, TrendingUp, Clock, Users, Layers, FileCheck2, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "../components/ui/SectionHeading";
 import { MISSION, VISION, STATS, CERTIFICATIONS } from "../data";
@@ -88,8 +88,8 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
-              { icon: Rocket, label: "Mission", text: MISSION },
-              { icon: Eye, label: "Vision", text: VISION },
+              { label: "Our Mission", text: MISSION, dark: true },
+              { label: "Our Vision", text: VISION, dark: false },
             ].map((item, i) => (
               <motion.div
                 key={item.label}
@@ -97,26 +97,33 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
-                whileHover={{ y: -6, borderColor: "rgba(47,168,224,0.4)" }}
-                className="relative rounded-2xl p-7 backdrop-blur-md overflow-hidden group"
-                style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.14)" }}
+                className="relative rounded-2xl p-8 overflow-hidden"
+                style={{
+                  background: item.dark ? "#0f2340" : "#f5efe0",
+                  borderLeft: `4px solid ${item.dark ? "#e11d3c" : "#c99a2e"}`,
+                }}
               >
-                <div
-                  className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl"
-                  style={{ background: "var(--color-sky)" }}
+                <Quote
+                  size={40}
+                  style={{ color: item.dark ? "#e11d3c" : "#c99a2e" }}
+                  className="mb-4"
+                  fill={item.dark ? "#e11d3c" : "#c99a2e"}
                 />
-                <div className="relative">
-                  <motion.div
-                    whileHover={{ rotate: 8, scale: 1.08 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                    style={{ background: "rgba(47,168,224,0.15)" }}
-                  >
-                    <item.icon size={20} style={{ color: "var(--color-sky)" }} />
-                  </motion.div>
-                  <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "var(--color-sky)" }}>{item.label}</p>
-                  <p className="text-white/80 leading-relaxed">{item.text}</p>
-                </div>
+                <p
+                  className="text-xs font-bold uppercase tracking-widest mb-4"
+                  style={{ color: item.dark ? "rgba(255,255,255,0.5)" : "rgba(15,35,64,0.55)" }}
+                >
+                  {item.label}
+                </p>
+                <p
+                  className="italic text-lg leading-relaxed"
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    color: item.dark ? "rgba(255,255,255,0.92)" : "#1a2b45",
+                  }}
+                >
+                  {item.text}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -177,21 +184,41 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-pad-sm bg-offwhite">
+      <section className="section-pad-sm" style={{ background: "#0f2340" }}>
         <div className="container-page">
-          <SectionHeading eyebrow="What drives us" title="Mission, approach, standard" />
+          <SectionHeading eyebrow="What drives us" title="Mission, approach, standard" light />
           <div className="grid md:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.t} className="card-surface p-6 bg-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 shadow-soft ${v.tile}`}>
-                    <v.icon className="text-white" size={20} />
-                  </div>
-                  <h4 className="font-bold text-navy">{v.t}</h4>
+            {values.map((v, i) => {
+              const dark = i !== 1;
+              const accent = dark ? "#e11d3c" : "#c99a2e";
+              return (
+                <div
+                  key={v.t}
+                  className="rounded-2xl p-8"
+                  style={{
+                    background: dark ? "#16294a" : "#f5efe0",
+                    borderLeft: `4px solid ${accent}`,
+                  }}
+                >
+                  <Quote size={36} style={{ color: accent }} fill={accent} className="mb-4" />
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest mb-3"
+                    style={{ color: dark ? "rgba(255,255,255,0.5)" : "rgba(15,35,64,0.55)" }}
+                  >
+                    {v.t}
+                  </p>
+                  <p
+                    className="italic leading-relaxed"
+                    style={{
+                      fontFamily: "Georgia, serif",
+                      color: dark ? "rgba(255,255,255,0.9)" : "#1a2b45",
+                    }}
+                  >
+                    {v.d}
+                  </p>
                 </div>
-                <p className="text-gray-600 text-sm mt-2">{v.d}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
