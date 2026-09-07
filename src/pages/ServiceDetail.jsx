@@ -70,7 +70,7 @@ export default function ServiceDetail() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {service.items.map((item) => (
                 <div key={item.name} className="bg-white border border-line rounded-xl overflow-hidden shadow-soft flex flex-col">
-                  <img src={item.image} alt={item.name} className="w-full h-40 object-cover" />
+                  <img src={item.image} alt={item.name} className="w-full h-auto object-contain" />
                   <div className="p-4 flex-1 flex flex-col">
                     <h4 className="text-navy font-semibold text-sm mb-1">{item.name}</h4>
                     {item.description && (
