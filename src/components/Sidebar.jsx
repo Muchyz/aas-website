@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import * as Icons from "lucide-react";
-import { X, ChevronDown, ChevronRight, Phone, Wrench } from "lucide-react";
+import {
+  X, ChevronDown, ChevronRight, Phone, Wrench,
+  Home, FolderKanban, Mail, Newspaper, HelpCircle, ShieldCheck, FileText,
+} from "lucide-react";
 import { SERVICES, CONTACT_PHONE } from "../data";
 
 const COMPANY_LINKS = [
@@ -12,12 +15,12 @@ const COMPANY_LINKS = [
 ];
 
 const FLAT_LINKS = [
-  { path: "/projects", label: "Projects" },
-  { path: "/contact", label: "Contact" },
-  { path: "/blog", label: "Insights" },
-  { path: "/faq", label: "FAQ" },
-  { path: "/privacy-policy", label: "Privacy Policy" },
-  { path: "/terms-of-use", label: "Terms of Use" },
+  { path: "/projects", label: "Projects", icon: FolderKanban },
+  { path: "/contact", label: "Contact", icon: Mail },
+  { path: "/blog", label: "Insights", icon: Newspaper },
+  { path: "/faq", label: "FAQ", icon: HelpCircle },
+  { path: "/privacy-policy", label: "Privacy Policy", icon: ShieldCheck },
+  { path: "/terms-of-use", label: "Terms of Use", icon: FileText },
 ];
 
 export default function Sidebar({ open, onClose }) {
@@ -68,10 +71,11 @@ export default function Sidebar({ open, onClose }) {
           <Link
             to="/"
             onClick={onClose}
-            className={`block py-3 text-lg font-bold border-b border-slate-100 ${
+            className={`flex items-center gap-3 py-3 text-lg font-bold border-b border-slate-100 ${
               isActive("/") ? "text-blue-600" : "text-slate-900"
             }`}
           >
+            <Home size={20} className="text-blue-600 shrink-0" />
             Home
           </Link>
 
@@ -146,18 +150,22 @@ export default function Sidebar({ open, onClose }) {
           </div>
 
           {/* Remaining flat links */}
-          {FLAT_LINKS.map((l) => (
-            <Link
-              key={l.path}
-              to={l.path}
-              onClick={onClose}
-              className={`block py-3 text-lg font-bold border-b border-slate-100 ${
-                isActive(l.path) ? "text-blue-600" : "text-slate-900"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+          {FLAT_LINKS.map((l) => {
+            const Icon = l.icon;
+            return (
+              <Link
+                key={l.path}
+                to={l.path}
+                onClick={onClose}
+                className={`flex items-center gap-3 py-3 text-lg font-bold border-b border-slate-100 ${
+                  isActive(l.path) ? "text-blue-600" : "text-slate-900"
+                }`}
+              >
+                <Icon size={20} className="text-blue-600 shrink-0" />
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Footer */}
