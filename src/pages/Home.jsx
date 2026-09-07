@@ -91,27 +91,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="container-page section-pad-sm">
-        <p className="tag-chip mb-3"><span className="tag-dot" /> Why clients stay</p>
-        <div className="grid md:grid-cols-3 gap-6 mt-8">
-          {VALUES.map((v, i) => {
-            const tiles = ["icon-tile-amber", "icon-tile-sky", "icon-tile-teal"];
-            return (
-              <div key={v.t} className="card-surface p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-soft ${tiles[i % 3]}`}>
-                    <CheckCircle2 className="text-white" size={19} />
-                  </div>
-                  <h4 className="text-lg font-bold text-navy">{v.t}</h4>
-                </div>
-                <p className="text-gray-600 text-sm mt-2">{v.d}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Testimonial */}
       <section className="container-page section-pad-sm">
         <div className="relative glass-panel rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center overflow-hidden">
