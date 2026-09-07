@@ -47,7 +47,7 @@ export default function Navbar() {
       </div>
 
       <div className="container-page flex items-center justify-between py-2">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2">
           {logoOk ? (
             <img src="/logo.png" alt="Advanced Automation Systems" className="h-20 w-auto" onError={() => setLogoOk(false)} />
           ) : (

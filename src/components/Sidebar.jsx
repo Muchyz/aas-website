@@ -66,9 +66,9 @@ export default function Sidebar({ open, onClose }) {
           transform transition-transform duration-300 ease-in-out
           ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-200">
+        <div className="flex items-center justify-between px-5 py-2.5 border-b border-slate-200">
           {logoOk ? (
-              <img src="/logo.png" alt="Advanced Automation Systems" className="h-12 w-auto" onError={() => setLogoOk(false)} />
+              <img src="/logo.png" alt="Advanced Automation Systems" className="h-16 w-auto" onError={() => setLogoOk(false)} />
             ) : (
               <span className="font-semibold text-slate-900">Menu</span>
             )}
