@@ -379,7 +379,7 @@ export const BLOG_POSTS = [
 export const BRANDS = [
   { name: "Siemens", logo: "/brands/siemens.jpg" },
   { name: "Schneider Electric", logo: "/brands/schneider.jpg" },
-  { name: "ABB", logo: "/brands/abb.svg" },
+  { name: "ABB", logo: "/brands/abb.jpg" },
   { name: "Fluke", logo: "/brands/fluke.svg" },
   { name: "Phoenix Contact", logo: "/brands/phoenix-contact.svg" },
   { name: "Greystone", logo: "/brands/greystone.svg" },
