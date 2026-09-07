@@ -1,4 +1,4 @@
-import { ShieldCheck, Zap, Award, Users } from "lucide-react";
+import { ShieldCheck, Zap, Award, Users, Headset, MapPin, Wallet } from "lucide-react";
 
 const ACCENT = "#2563eb";
 
@@ -7,6 +7,9 @@ const points = [
   { icon: Zap, title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
   { icon: Award, title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
   { icon: Users, title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
+  { icon: Headset, title: "24/7 Support", desc: "Round-the-clock response for urgent faults and emergency callouts, whenever they arise." },
+  { icon: MapPin, title: "Nationwide Coverage", desc: "On-site teams and support reaching clients across Kenya, not just in major towns." },
+  { icon: Wallet, title: "Transparent Pricing", desc: "Clear, upfront quotes with no hidden costs, so you know exactly what you're paying for." },
 ];
 
 export default function WhyChooseUs() {
