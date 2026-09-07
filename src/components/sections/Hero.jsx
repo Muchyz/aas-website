@@ -31,7 +31,6 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // preload all slide images so switching is instant, no pop-in
     slides.forEach((s) => {
       const img = new Image();
       img.src = s.image;
@@ -68,26 +67,31 @@ export default function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(14,42,71,0.6) 0%, rgba(14,42,71,0.4) 40%, rgba(14,42,71,0.18) 70%, rgba(14,42,71,0.06) 100%)",
+              "linear-gradient(to top, rgba(14,42,71,0.65) 0%, rgba(14,42,71,0.45) 40%, rgba(14,42,71,0.2) 70%, rgba(14,42,71,0.08) 100%)",
+          }}
+        />
+        <div
+          className="hidden lg:block absolute inset-0"
+          style={{
+            background: "linear-gradient(to right, rgba(14,42,71,0.55) 0%, rgba(14,42,71,0.25) 45%, rgba(14,42,71,0) 70%)",
           }}
         />
       </div>
 
-      <div className="relative z-10 h-full flex flex-col px-4 pt-3 pb-3">
+      <div className="relative z-10 h-full flex flex-col container-page px-4 lg:px-8 pt-3 pb-3 lg:pt-6 lg:pb-6">
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex-shrink-0 flex justify-between"
+          className="flex-shrink-0 flex justify-between lg:justify-start lg:gap-3"
         >
           {["Certified & Compliant", "ISO-Aligned", "24/7 Support"].map((b) => (
             <span
               key={b}
-              className="flex items-center gap-1 bg-black/50 border border-white/20 text-white font-semibold px-2 py-0.5 rounded-full"
-              style={{ fontSize: "10px" }}
+              className="flex items-center gap-1 bg-black/50 border border-white/20 text-white font-semibold px-2 py-0.5 lg:px-3 lg:py-1 rounded-full text-[10px] lg:text-xs"
             >
-              <CheckCircle2 size={11} style={{ color: "var(--color-sky)" }} />
+              <CheckCircle2 size={11} className="lg:w-3.5 lg:h-3.5" style={{ color: "var(--color-sky)" }} />
               {b}
             </span>
           ))}
@@ -96,7 +100,7 @@ export default function Hero() {
         <div className="flex-1" />
 
         <div
-          className="flex-shrink-0 flex flex-col gap-2 rounded-2xl"
+          className="flex-shrink-0 flex flex-col gap-2 lg:gap-4 rounded-2xl lg:max-w-2xl"
           style={{
             background:
               "linear-gradient(180deg, rgba(14,42,71,0.0) 0%, rgba(14,42,71,0.55) 15%, rgba(14,42,71,0.7) 85%, rgba(14,42,71,0.0) 100%)",
@@ -111,13 +115,13 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-2 lg:gap-4"
             >
               <div className="flex items-center gap-2">
-                <span className="w-5 h-[2px] flex-shrink-0" style={{ background: "var(--color-brand)" }} />
+                <span className="w-5 lg:w-8 h-[2px] flex-shrink-0" style={{ background: "var(--color-brand)" }} />
                 <span
-                  className="font-bold uppercase tracking-widest"
-                  style={{ fontSize: "9px", color: "var(--color-sky)" }}
+                  className="font-bold uppercase tracking-widest text-[9px] lg:text-sm"
+                  style={{ color: "var(--color-sky)" }}
                 >
                   {slide.tag}
                 </span>
@@ -127,35 +131,36 @@ export default function Hero() {
                 className="font-extrabold text-white tracking-tight leading-none"
                 style={{ fontSize: "clamp(1.8rem, 8vw, 2.8rem)" }}
               >
-                {slide.heading}
-                <br />
-                <span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span>
+                <span className="lg:hidden">{slide.heading}<br /><span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span></span>
+                <span className="hidden lg:block lg:text-6xl xl:text-7xl">
+                  {slide.heading}<br />
+                  <span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span>
+                </span>
               </h1>
 
-              <p className="text-gray-300 leading-snug" style={{ fontSize: "11px" }}>
+              <p className="text-gray-300 leading-snug text-[11px] lg:text-lg lg:max-w-xl">
                 {slide.desc}
               </p>
             </motion.div>
           </AnimatePresence>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 lg:gap-4 lg:max-w-md">
             <Link
               to="/services"
-              className="flex-1 flex items-center justify-center gap-1 text-white font-bold rounded-lg"
-              style={{ padding: "9px 0", fontSize: "12px", background: "var(--color-brand)" }}
+              className="flex-1 flex items-center justify-center gap-1 lg:gap-2 text-white font-bold rounded-lg text-[12px] lg:text-base py-[9px] lg:py-3.5"
+              style={{ background: "var(--color-brand)" }}
             >
-              Free Quote <ArrowRight size={12} />
+              Free Quote <ArrowRight size={12} className="lg:w-5 lg:h-5" />
             </Link>
             <a
               href="tel:+254794726207"
-              className="flex-1 flex items-center justify-center gap-1 border border-white/30 bg-white/10 text-white font-semibold rounded-lg"
-              style={{ padding: "9px 0", fontSize: "12px" }}
+              className="flex-1 flex items-center justify-center gap-1 lg:gap-2 border border-white/30 bg-white/10 text-white font-semibold rounded-lg text-[12px] lg:text-base py-[9px] lg:py-3.5"
             >
-              <Phone size={12} /> Call Now
+              <Phone size={12} className="lg:w-5 lg:h-5" /> Call Now
             </a>
           </div>
 
-          <div className="grid grid-cols-4 rounded-xl overflow-hidden border border-white/10">
+          <div className="grid grid-cols-4 rounded-xl overflow-hidden border border-white/10 lg:max-w-lg">
             {[
               { v: "4", l: "Solutions" },
               { v: "24/7", l: "Response" },
@@ -164,20 +169,19 @@ export default function Hero() {
             ].map((s, i) => (
               <div
                 key={s.l}
-                className={`text-center ${i % 2 === 0 ? "bg-white/10" : "bg-white/5"}`}
-                style={{ padding: "6px 0" }}
+                className={`text-center py-1.5 lg:py-3 ${i % 2 === 0 ? "bg-white/10" : "bg-white/5"}`}
               >
-                <p className="font-extrabold text-white leading-none" style={{ fontSize: "14px" }}>
+                <p className="font-extrabold text-white leading-none text-[14px] lg:text-xl">
                   {s.v}
                 </p>
-                <p className="text-gray-400 uppercase tracking-wide mt-0.5" style={{ fontSize: "8px" }}>
+                <p className="text-gray-400 uppercase tracking-wide mt-0.5 text-[8px] lg:text-xs">
                   {s.l}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center gap-1.5 pt-1">
+          <div className="flex justify-center lg:justify-start gap-1.5 pt-1">
             {slides.map((_, i) => (
               <button
                 key={i}
