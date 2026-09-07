@@ -86,12 +86,12 @@ export default function ServiceDetail() {
               {BRANDS.map((brand) => (
                 <div
                   key={brand.name}
-                  className="bg-white border border-line rounded-xl p-6 flex items-center justify-center shadow-soft"
+                  className="bg-white border border-line rounded-xl p-3 flex items-center justify-center shadow-soft"
                 >
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    className="max-h-16 w-auto object-contain"
+                    className="max-h-24 w-full object-contain"
                   />
                 </div>
               ))}
