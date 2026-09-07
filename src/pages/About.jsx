@@ -30,7 +30,10 @@ export default function About() {
             </h1>
             <p className="text-gray-600 mt-5 max-w-xl">
               AAS was built on a simple idea: do the electrical and automation work properly the first
-              time, so the client never has to think about it again.
+              time, so the client never has to think about it again. From single panel installations
+              to full plant automation, our team handles design, supply, installation, and
+              commissioning under one roof, backed by engineers who stay accountable long after
+              the project is signed off.
             </p>
           </div>
           <div className="relative mt-10 rounded-2xl overflow-hidden shadow-soft-lg">
