@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -22,7 +21,6 @@ function App() {
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans">
       <ScrollToTop />
-      <BackToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
