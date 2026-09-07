@@ -76,7 +76,7 @@ export const SERVICES = [
       { name: "Relays", image: "/services/products/relays.jpg", description: "Control and protection relays for switching and interlocking circuits." },
       { name: "PLCs, HMIs, modules & software", image: "/services/products/plc-hmi.jpg", description: "Programmable controllers, operator interfaces, and the software to run them." },
       { name: "Variable frequency drives", image: "/services/products/vfd.svg", description: "Precise motor speed and torque control for energy savings and process control." },
-      { name: "Digital multimeters", image: "/services/products/multimeters.svg", description: "Handheld meters for voltage, current, resistance, and continuity testing." },
+      { name: "Digital multimeters", image: "/services/products/multimeters.jpg", description: "Handheld meters for voltage, current, resistance, and continuity testing." },
       { name: "Test & measurement equipment", image: "/services/products/test-equipment.svg", description: "Instruments for diagnostics, calibration, and on-site verification." },
       { name: "Push buttons & indicators", image: "/services/products/push-buttons.svg", description: "Panel-mount controls and indicator lights for operator stations." },
       { name: "Power, control & communication cables", image: "/services/products/cables.svg", description: "Cabling for power distribution, control signals, and data communication." },
