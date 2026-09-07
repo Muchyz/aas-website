@@ -33,10 +33,10 @@ export default function ServiceDetail() {
           <ArrowLeft size={15} /> All services
         </Link>
 
-        {/* Full-bleed hero image with overlapping icon badge */}
-        <div className="relative">
+        {/* Hero image with overlapping icon badge */}
+        <div className="relative -mx-3 sm:mx-0">
           <div className="relative rounded-2xl overflow-hidden shadow-soft-lg">
-            <img src={service.image} alt={service.title} className="w-full h-56 sm:h-72 object-cover" />
+            <img src={service.image} alt={service.title} className="w-full h-56 sm:h-80 object-cover" />
             <div
               className="absolute inset-0"
               style={{ background: "linear-gradient(to top, rgba(10,26,53,0.35), transparent 50%)" }}
