@@ -35,6 +35,13 @@ export default function Footer() {
           className="relative overflow-hidden"
           style={{ background: "linear-gradient(160deg, #0a1128 0%, #0f1c3f 45%, #0a1128 100%)" }}
         >
+          <div
+            className="absolute top-0 left-0 right-0 h-px z-10"
+            style={{
+              background: "linear-gradient(to right, transparent, #38bdf8, #60a5fa, #38bdf8, transparent)",
+              boxShadow: "0 0 10px 1px rgba(56,189,248,0.7), 0 0 24px 4px rgba(56,189,248,0.35)",
+            }}
+          />
           <div className="absolute -top-32 left-1/3 w-[30rem] h-[30rem] rounded-full opacity-[0.09] blur-3xl pointer-events-none" style={{ background: "#2563eb" }} />
           <div className="absolute bottom-0 right-0 w-[24rem] h-[24rem] rounded-full opacity-[0.07] blur-3xl pointer-events-none" style={{ background: "#0ea5e9" }} />
 
