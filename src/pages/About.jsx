@@ -35,11 +35,11 @@ export default function About() {
           </div>
           <div className="relative mt-10 rounded-2xl overflow-hidden shadow-soft-lg">
             <img
-              src="https://picsum.photos/seed/aas-team/1200/500"
-              alt="AAS technicians at work"
+              src="/about/aas-logo.png"
+              alt="Advanced Automation Systems logo"
               className="w-full h-64 md:h-80 object-cover"
             />
-            <div className="glass-panel absolute bottom-4 left-4 right-4 sm:right-auto rounded-xl px-5 py-4 sm:max-w-xs">
+            <div className="glass-panel px-5 py-4">
               <p className="text-navy font-semibold text-sm">A crew that stays accountable</p>
               <p className="text-gray-600 text-xs mt-1">Same technicians who scope the job see it through to commissioning.</p>
             </div>
