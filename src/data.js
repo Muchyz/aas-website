@@ -60,7 +60,7 @@ export const SERVICES = [
       { name: "Temperature sensors", image: "/services/instrumentation/temperature-sensors.jpg", description: "Accurate temperature monitoring for process and environmental control." },
       { name: "Flow meters", image: "/services/instrumentation/flow-meters.jpg", description: "Precise measurement of liquid and gas flow rates across your process." },
       { name: "Level sensors", image: "/services/instrumentation/level-sensors.jpg", description: "Reliable tank and vessel level detection for inventory and safety." },
-      { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.svg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
+      { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.jpg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
       { name: "HVAC sensors", image: "/services/instrumentation/hvac-sensors.svg", description: "Sensors for air quality, humidity, and climate control systems." },
       { name: "Proximity sensors", image: "/services/instrumentation/proximity-sensors.svg", description: "Non-contact detection for automation, safety, and positioning tasks." },
     ],
