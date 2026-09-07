@@ -15,6 +15,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Routes>
       <Footer />
     </div>

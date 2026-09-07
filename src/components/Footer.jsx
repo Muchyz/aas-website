@@ -106,7 +106,10 @@ export default function Footer() {
           <div className="relative border-t border-white/[0.06]">
             <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
               <span>© {new Date().getFullYear()} Advanced Automation Systems Limited. All rights reserved.</span>
-              <Link to="/faq" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
+              <div className="flex items-center gap-4">
+                <Link to="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
+                <Link to="/terms-of-use" className="hover:text-blue-400 transition-colors">Terms of Use</Link>
+              </div>
             </div>
           </div>
         </div>
