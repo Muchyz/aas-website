@@ -75,7 +75,7 @@ export const SERVICES = [
       { name: "MCB, MCCB, RCCB", image: "/services/products/mcb-mccb-rccb.jpg", description: "Circuit breakers and residual current devices for protection and safe isolation." },
       { name: "Relays", image: "/services/products/relays.jpg", description: "Control and protection relays for switching and interlocking circuits." },
       { name: "PLCs, HMIs, modules & software", image: "/services/products/plc-hmi.jpg", description: "Programmable controllers, operator interfaces, and the software to run them." },
-      { name: "Variable frequency drives", image: "/services/products/vfd.svg", description: "Precise motor speed and torque control for energy savings and process control." },
+      { name: "Variable frequency drives", image: "/services/products/vfd.jpg", description: "Precise motor speed and torque control for energy savings and process control." },
       { name: "Digital multimeters", image: "/services/products/multimeters.jpg", description: "Handheld meters for voltage, current, resistance, and continuity testing." },
       { name: "Test & measurement equipment", image: "/services/products/test-equipment.jpg", description: "Instruments for diagnostics, calibration, and on-site verification." },
       { name: "Push buttons & indicators", image: "/services/products/push-buttons.jpg", description: "Panel-mount controls and indicator lights for operator stations." },
