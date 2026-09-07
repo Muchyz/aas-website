@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Logo */}
           <div className="relative container-page pt-10 pb-6 flex justify-center">
-            <img src="/logo.png" alt="Advanced Automation Systems" className="h-14 w-auto" />
+            <img src="/logo.png" alt="Advanced Automation Systems" className="h-20 w-auto" />
           </div>
 
           {/* Main content */}
