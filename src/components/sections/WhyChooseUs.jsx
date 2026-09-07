@@ -1,52 +1,58 @@
-import { ShieldCheck, Clock, Award, Users } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
-const ICONS = { ShieldCheck, Clock, Award, Users };
-
-const ACCENTS = ["#2563eb", "#38bdf8", "#0ea5e9", "#1d4ed8"];
+const ACCENT = "#2563eb";
 
 const points = [
-  { icon: "ShieldCheck", title: "Certified & Compliant", desc: "Electrical work delivered to recognised national safety standards, backed by rigorous audits and design reviews." },
-  { icon: "Clock", title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
-  { icon: "Award", title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
-  { icon: "Users", title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
+  { title: "Certified & Compliant", desc: "Electrical work delivered to recognised national safety standards, backed by rigorous audits and design reviews." },
+  { title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
+  { title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
+  { title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="container-page section-pad-sm">
-      <div className="mb-12 max-w-xl">
+    <section className="container-page section-pad-sm relative overflow-hidden">
+      <div
+        className="absolute -top-10 left-1/4 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%)" }}
+      />
+      <div
+        className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.12), transparent 70%)" }}
+      />
+      <div className="mb-10 max-w-xl">
         <p className="tag-chip mb-3"><span className="tag-dot" /> Why AAS</p>
         <h2 className="text-2xl md:text-3xl font-bold text-navy">Why choose us</h2>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="space-y-5 max-w-2xl">
         {points.map((p, i) => {
-          const Icon = ICONS[p.icon];
-          const accent = ACCENTS[i % ACCENTS.length];
+          const accent = ACCENT;
           return (
             <div
               key={p.title}
-              className="relative rounded-2xl p-6 bg-white animate-fade-up"
+              className="relative flex items-center gap-5 rounded-2xl p-5 animate-fade-up backdrop-blur-xl"
               style={{
                 animationDelay: `${i * 100}ms`,
-                boxShadow: "0 12px 30px -14px rgba(10,26,53,0.18)",
-                borderTop: `3px solid ${accent}`,
+                background: "rgba(255,255,255,0.55)",
+                border: "1px solid rgba(255,255,255,0.6)",
+                boxShadow: "0 20px 45px -20px rgba(10,26,53,0.35), inset 0 1px 0 rgba(255,255,255,0.6)",
+                borderLeft: `4px solid ${accent}`,
               }}
             >
-              <span
-                className="absolute top-4 right-5 text-2xl font-extrabold"
-                style={{ color: "rgba(10,26,53,0.06)" }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
               <div
-                className="relative w-12 h-12 rounded-full flex items-center justify-center mb-5"
-                style={{ background: `${accent}1a` }}
+                className="relative w-14 h-14 rounded-full flex items-center justify-center shrink-0"
+                style={{
+                  background: accent,
+                  boxShadow: `0 0 20px 2px ${accent}55`,
+                }}
               >
-                <Icon size={22} style={{ color: accent }} />
+                <CheckCircle2 size={26} className="text-white" />
               </div>
-              <h3 className="font-bold text-navy mb-2">{p.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+              <div>
+                <h3 className="font-bold text-navy text-lg">{p.title}</h3>
+                <p className="text-gray-600 text-sm mt-1 leading-relaxed">{p.desc}</p>
+              </div>
             </div>
           );
         })}
