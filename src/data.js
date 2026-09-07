@@ -46,11 +46,8 @@ export const SERVICES = [
       "Power quality analysis",
       "Technical electrical safety audits",
       "Technical design reviews",
-      "Power generation simulation for PPA-grade projects",
-      "Financial evaluations for power projects",
       "Independent engineer and commissioning engineer services",
       "Project management",
-      "Standard operating procedures aligned to regulatory and off-taker requirements",
     ],
   },
   {
@@ -101,12 +98,6 @@ export const SERVICES = [
       "Process automation",
       "Energy management systems",
       "Mains & genset changeover panels",
-      "Grid impact assessments and network data validation",
-      "Load flow and contingency analysis",
-      "Short-circuit and fault level studies",
-      "Dynamic and voltage stability assessments",
-      "Protection coordination reviews",
-      "Network reinforcement and reactive compensation recommendations",
     ],
   },
   {
@@ -217,24 +208,6 @@ export const SERVICES = [
       "Integration with existing control systems",
     ],
   },
-  {
-    slug: "automated-school-bell",
-    title: "Automated School Bell",
-    blurb: "A synchronized, reliable bell system that keeps the school day running on time.",
-    icon: "Bell",
-    image: "/services/automated-school-bell.jpg",
-    longDescription: [
-      "An automated bell system runs on your school's exact timetable, ringing precisely on schedule for every period, break, and assembly, with no need to rely on someone remembering to ring it manually.",
-      "Ringing patterns are fully customizable, so class time, break time, and assembly can each have a distinct tone. A battery backup keeps the system working through power outages, and a mobile-triggered override lets administrators call an assembly from anywhere on campus.",
-    ],
-    items: [
-      "Timetable-synchronized automatic ringing",
-      "Customizable ringing patterns per period type",
-      "Battery backup for power outages",
-      "Mobile phone override for assembly calls",
-      "Installation and ongoing support",
-    ],
-  },
 ];
 
 export const PROCESS = [
@@ -279,7 +252,6 @@ export const RELATED_SERVICES = {
   "variable-frequency-drives": ["product-supplies", "control-automation"],
   "industrial-wireless-communication": ["pump-monitoring-systems", "instrumentation"],
   "pump-monitoring-systems": ["instrumentation", "industrial-wireless-communication"],
-  "automated-school-bell": ["control-automation", "consulting"],
 };
 
 
