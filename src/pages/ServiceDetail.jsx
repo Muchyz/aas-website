@@ -33,15 +33,28 @@ export default function ServiceDetail() {
           <ArrowLeft size={15} /> All services
         </Link>
 
-        <div className="relative rounded-2xl overflow-hidden shadow-soft-lg mb-8">
-          <img src={service.image} alt={service.title} className="w-full h-56 object-cover" />
-          <div className={`absolute top-5 left-5 w-12 h-12 rounded-2xl icon-tile-${a.tile} shadow-soft flex items-center justify-center`}>
-            <Icon className="text-white" size={22} />
+        {/* Full-bleed hero image with overlapping icon badge */}
+        <div className="relative">
+          <div className="relative rounded-2xl overflow-hidden shadow-soft-lg">
+            <img src={service.image} alt={service.title} className="w-full h-56 sm:h-72 object-cover" />
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(to top, rgba(10,26,53,0.35), transparent 50%)" }}
+            />
+          </div>
+          <div
+            className={`absolute -bottom-7 left-6 w-16 h-16 rounded-full icon-tile-${a.tile} flex items-center justify-center shrink-0`}
+            style={{ border: "4px solid #ffffff", boxShadow: "0 10px 25px -8px rgba(10,26,53,0.35)" }}
+          >
+            <Icon className="text-white" size={26} />
           </div>
         </div>
 
-        <h1 className="text-3xl font-bold text-navy">{service.title}</h1>
-        <p className="text-gray-600 mt-4 max-w-xl">{service.blurb}</p>
+        {/* Title block with accent left border */}
+        <div className="pl-6 mt-12 border-l-4" style={{ borderColor: "#2563eb" }}>
+          <h1 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide text-navy">{service.title}</h1>
+          <p className="text-gray-600 mt-4 max-w-xl">{service.blurb}</p>
+        </div>
 
         {service.longDescription && (
           <div className="mt-6 space-y-4 max-w-2xl">
