@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { CheckCircle2, ArrowLeft, ArrowUpRight, Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell } from "lucide-react";
-import { SERVICES, RELATED_SERVICES } from "../data";
+import { SERVICES, RELATED_SERVICES, BRANDS } from "../data";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const ICONS = { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell };
@@ -77,6 +77,22 @@ export default function ServiceDetail() {
                       <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
                     )}
                   </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-navy font-bold mt-14 mb-4">Brands we deal with</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {BRANDS.map((brand) => (
+                <div
+                  key={brand.name}
+                  className="bg-white border border-line rounded-xl p-6 flex items-center justify-center shadow-soft"
+                >
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="max-h-16 w-auto object-contain"
+                  />
                 </div>
               ))}
             </div>
