@@ -1,12 +1,12 @@
-import { CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Zap, Award, Users } from "lucide-react";
 
 const ACCENT = "#2563eb";
 
 const points = [
-  { title: "Certified & Compliant", desc: "Electrical work delivered to recognised national safety standards, backed by rigorous audits and design reviews." },
-  { title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
-  { title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
-  { title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
+  { icon: ShieldCheck, title: "Certified & Compliant", desc: "Electrical work delivered to recognised national safety standards, backed by rigorous audits and design reviews." },
+  { icon: Zap, title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
+  { icon: Award, title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
+  { icon: Users, title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
 ];
 
 export default function WhyChooseUs() {
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
                   boxShadow: `0 0 20px 2px ${accent}55`,
                 }}
               >
-                <CheckCircle2 size={26} className="text-white" />
+                <p.icon size={26} className="text-white" />
               </div>
               <div>
                 <h3 className="font-bold text-navy text-lg">{p.title}</h3>
