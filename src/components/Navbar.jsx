@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="container-page flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2">
           {logoOk ? (
-            <img src="/logo.png" alt="Advanced Automation Systems" className="h-14 w-auto" onError={() => setLogoOk(false)} />
+            <img src="/logo.png" alt="Advanced Automation Systems" className="h-16 w-auto" onError={() => setLogoOk(false)} />
           ) : (
             <span className="text-lg font-bold text-navy">
               ADVANCED AUTOMATION <span className="text-brand">SYSTEMS</span>
