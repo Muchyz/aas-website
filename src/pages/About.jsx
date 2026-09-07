@@ -1,6 +1,6 @@
 import {
   Target, Compass, Gem, ShieldCheck, Award, TrendingUp,
-  Clock, Users, Layers, FileCheck2, BadgeCheck, Quote,
+  Clock, Users, Layers, FileCheck2, BadgeCheck, Quote, Download,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionHeading from "../components/ui/SectionHeading";
@@ -280,6 +280,58 @@ export default function About() {
         </div>
       </div>
 
+      {/* DOWNLOAD COMPANY PROFILE */}
+      <div className="container-page pt-10 md:pt-14 pb-8 md:pb-10">
+        <div
+          className="relative overflow-hidden rounded-3xl p-6 md:p-8"
+          style={{
+            background: "linear-gradient(135deg, #2563eb 0%, #0a1a35 60%, #0a1a35 100%)",
+            boxShadow: "0 20px 50px -20px rgba(37,99,235,0.5)",
+          }}
+        >
+          <div
+            className="absolute -top-10 -left-10 w-56 h-56 rounded-full pointer-events-none"
+            style={{ background: "radial-gradient(circle, rgba(96,165,250,0.35), transparent 70%)" }}
+          />
+
+          <div className="relative flex items-start justify-between">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-white" />
+              <span className="text-xs font-bold uppercase tracking-widest text-white/80">
+                Company Profile
+              </span>
+            </div>
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+              style={{ background: "rgba(255,255,255,0.12)" }}
+            >
+              <Download size={20} className="text-white" />
+            </div>
+          </div>
+
+          <h3 className="relative text-2xl md:text-3xl font-bold text-white mt-5">
+            Get to know AAS
+          </h3>
+          <p className="relative text-white/70 text-sm mt-2 max-w-sm">
+            A detailed PDF overview of our services, capabilities, and past projects.
+          </p>
+
+          <div className="relative h-px my-6" style={{ background: "rgba(255,255,255,0.15)" }} />
+
+          <div className="relative flex items-center justify-between">
+            <span className="text-sm text-white/60">Tap to download</span>
+            <a
+              href="/company-profile.pdf"
+              download
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-transform hover:scale-105"
+              style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}
+            >
+              Download Now
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ const COLUMNS = [
 export default function Footer() {
   return (
     <>
-      <footer className="relative mt-24">
+      <footer className="relative mt-10 md:mt-12">
         <div
           className="relative overflow-hidden"
           style={{ background: "linear-gradient(160deg, #0a1128 0%, #0f1c3f 45%, #0a1128 100%)" }}
