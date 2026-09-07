@@ -57,12 +57,12 @@ export const SERVICES = [
     icon: "Gauge",
     image: "/services/instrumentation.jpg",
     items: [
-      "Temperature sensors",
-      "Flow meters",
-      "Level sensors",
-      "Pressure sensors",
-      "HVAC sensors",
-      "Proximity sensors",
+      { name: "Temperature sensors", image: "/services/instrumentation/temperature-sensors.svg", description: "Accurate temperature monitoring for process and environmental control." },
+      { name: "Flow meters", image: "/services/instrumentation/flow-meters.svg", description: "Precise measurement of liquid and gas flow rates across your process." },
+      { name: "Level sensors", image: "/services/instrumentation/level-sensors.svg", description: "Reliable tank and vessel level detection for inventory and safety." },
+      { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.svg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
+      { name: "HVAC sensors", image: "/services/instrumentation/hvac-sensors.svg", description: "Sensors for air quality, humidity, and climate control systems." },
+      { name: "Proximity sensors", image: "/services/instrumentation/proximity-sensors.svg", description: "Non-contact detection for automation, safety, and positioning tasks." },
     ],
   },
   {

@@ -64,7 +64,7 @@ export default function ServiceDetail() {
           </div>
         )}
 
-        {service.slug === "product-supplies" ? (
+        {(service.slug === "product-supplies" || service.slug === "instrumentation") ? (
           <>
             <h3 className="text-navy font-bold mt-10 mb-4">Products we supply</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -81,21 +81,25 @@ export default function ServiceDetail() {
               ))}
             </div>
 
-            <h3 className="text-navy font-bold mt-14 mb-4">Brands we deal with</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {BRANDS.map((brand) => (
-                <div
-                  key={brand.name}
-                  className="bg-white border border-line rounded-xl p-3 flex items-center justify-center shadow-soft"
-                >
-                  <img
-                    src={brand.logo}
-                    alt={brand.name}
-                    className="max-h-24 w-full object-contain"
-                  />
+            {service.slug === "product-supplies" && (
+              <>
+                <h3 className="text-navy font-bold mt-14 mb-4">Brands we deal with</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {BRANDS.map((brand) => (
+                    <div
+                      key={brand.name}
+                      className="bg-white border border-line rounded-xl p-3 flex items-center justify-center shadow-soft"
+                    >
+                      <img
+                        src={brand.logo}
+                        alt={brand.name}
+                        className="max-h-24 w-full object-contain"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </>
+            )}
           </>
         ) : (
           <>
