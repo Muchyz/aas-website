@@ -27,7 +27,7 @@ export default function ServiceDetail() {
   const related = SERVICES.filter((s) => s.slug !== service.slug);
 
   return (
-    <section className="max-w-4xl mx-auto section-pad-sm">
+    <section className="max-w-4xl mx-auto section-pad-sm !pt-6 md:!pt-8">
       <div className="px-6">
         <Link to="/services" className="text-brand font-semibold text-sm mb-6 inline-flex items-center gap-1.5">
           <ArrowLeft size={15} /> All services
