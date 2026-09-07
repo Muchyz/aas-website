@@ -62,7 +62,7 @@ export const SERVICES = [
       { name: "Level sensors", image: "/services/instrumentation/level-sensors.jpg", description: "Reliable tank and vessel level detection for inventory and safety." },
       { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.jpg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
       { name: "HVAC sensors", image: "/services/instrumentation/hvac-sensors.jpg", description: "Sensors for air quality, humidity, and climate control systems." },
-      { name: "Proximity sensors", image: "/services/instrumentation/proximity-sensors.svg", description: "Non-contact detection for automation, safety, and positioning tasks." },
+      { name: "Proximity sensors", image: "/services/instrumentation/proximity-sensors.jpg", description: "Non-contact detection for automation, safety, and positioning tasks." },
     ],
   },
   {
