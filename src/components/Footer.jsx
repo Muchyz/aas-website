@@ -23,6 +23,8 @@ const COLUMNS = [
       { to: "/contact", label: "Contact Us" },
       { to: "/faq", label: "FAQ" },
       { to: "/blog", label: "Insights" },
+      { to: "/privacy-policy", label: "Privacy Policy" },
+      { to: "/terms-of-use", label: "Terms of Use" },
     ],
   },
 ];
@@ -78,7 +80,16 @@ export default function Footer() {
               {/* Link columns */}
               <div className="sm:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-8">
                 {COLUMNS.map((col) => (
-                  <div key={col.label}>
+                  <div
+                    key={col.label}
+                    className={
+                      col.label === "Company"
+                        ? "col-start-2 row-start-1 sm:col-start-1"
+                        : col.label === "Services"
+                        ? "col-start-1 row-start-1 row-span-2 sm:col-start-2 sm:row-span-1"
+                        : "col-start-2 row-start-2 sm:col-start-3 sm:row-start-1"
+                    }
+                  >
                     <div className="text-white font-bold text-xs uppercase tracking-wider mb-1">
                       {col.label}
                     </div>
@@ -106,10 +117,6 @@ export default function Footer() {
           <div className="relative border-t border-white/[0.06]">
             <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
               <span>© {new Date().getFullYear()} Advanced Automation Systems Limited. All rights reserved.</span>
-              <div className="flex items-center gap-4">
-                <Link to="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link>
-                <Link to="/terms-of-use" className="hover:text-blue-400 transition-colors">Terms of Use</Link>
-              </div>
               
             </div>
           </div>
