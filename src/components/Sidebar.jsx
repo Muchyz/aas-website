@@ -51,7 +51,7 @@ export default function Sidebar({ open, onClose }) {
             <img
               src="/logo.png"
               alt="Advanced Automation Systems"
-              className="h-14 w-auto rounded-xl"
+              className="h-20 w-auto rounded-xl"
               onError={() => setLogoOk(false)}
             />
           ) : (
