@@ -64,7 +64,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Advanced Automation Systems"
-              className={`w-auto transition-all duration-300 ${scrolled ? "h-14" : "h-20"}`}
+              className={`w-auto rounded-xl transition-all duration-300 ${scrolled ? "h-14" : "h-20"}`}
               onError={() => setLogoOk(false)}
             />
           ) : (
