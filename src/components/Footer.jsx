@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronRight, ArrowUp, Phone, Mail, MapPin } from "lucide-react";
 import WhatsAppIcon from "./icons/WhatsAppIcon";
@@ -30,6 +31,14 @@ const COLUMNS = [
 ];
 
 export default function Footer() {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 500);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <footer className="relative mt-10 md:mt-12">
@@ -125,13 +134,15 @@ export default function Footer() {
 
       {/* Floating action buttons */}
       <div className="fixed right-5 bottom-5 z-40 flex flex-col items-center gap-2.5">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,99,235,0.5)] transition-all hover:-translate-y-1"
-          aria-label="Back to top"
-        >
-          <ArrowUp size={18} />
-        </button>
+        {showTop && (
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="w-11 h-11 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,99,235,0.5)] transition-all hover:-translate-y-1"
+            aria-label="Back to top"
+          >
+            <ArrowUp size={18} />
+          </button>
+        )}
         <a
           href={`https://wa.me/${WHATSAPP_NUMBER}`}
           className="w-11 h-11 rounded-full bg-[#25D366] hover:bg-[#1ebe5a] text-white flex items-center justify-center shadow-[0_4px_16px_rgba(37,211,102,0.5)] transition-all hover:-translate-y-1"
