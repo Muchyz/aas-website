@@ -321,7 +321,7 @@ export default function About() {
           <div className="relative flex items-center justify-between">
             <span className="text-sm text-white/60">Tap to download</span>
             <a
-              href="/company-profile.pdf"
+              href="/Advanced%20Automation%20Systems%20-%20Company%20Profile.pdf"
               download="Advanced Automation Systems - Company Profile.pdf"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-transform hover:scale-105"
               style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}

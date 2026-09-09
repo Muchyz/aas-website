@@ -1,0 +1,1364 @@
+===== ./src/data.js =====
+export const WHATSAPP_NUMBER = "254794726207";
+export const CONTACT_PHONE = "0794 726 207";
+export const CONTACT_EMAIL = "advancedautomation.ltd@gmail.com";
+
+export const PRIMARY_NAV = [
+  { path: "/", label: "Home" },
+  { path: "/services", label: "Services" },
+  { path: "/about", label: "About" },
+  { path: "/contact", label: "Contact" },
+];
+
+export const MORE_NAV = [
+  { path: "/projects", label: "Projects" },
+  { path: "/team", label: "Team" },
+  { path: "/certifications", label: "Certifications" },
+  { path: "/testimonials", label: "Testimonials" },
+  { path: "/blog", label: "Blog" },
+  { path: "/faq", label: "FAQ" },
+];
+
+export const SECTORS = [
+  "Manufacturing",
+  "Beverage & Bottling",
+  "Water Treatment",
+  "Warehousing & Logistics",
+  "Cold Chain & Storage",
+  "Commercial Buildings",
+  "Textile & Processing",
+  "Agriculture",
+];
+
+export const SERVICES = [
+  {
+    slug: "electrical-installations",
+    title: "Electrical Installations & Services",
+    blurb: "End-to-end electrical works and technical consultancy, from panel building and cable installation to safety audits, design reviews, and project commissioning, delivered to the standard your project and financiers expect.",
+    icon: "Zap",
+    image: "/services/electrical-installations.png",
+    items: [
+      "Low voltage switchboards and distribution panels",
+      "Cable laying",
+      "Machine assembly and installation",
+      "Transformer testing and maintenance",
+      "Insulation resistance test",
+      "Earth resistance test",
+      "Power quality analysis",
+      "Technical electrical safety audits",
+      "Technical design reviews",
+      "Independent engineer and commissioning engineer services",
+      "Project management",
+    ],
+  },
+  {
+    slug: "instrumentation",
+    title: "Instrumentation",
+    blurb: "Sensors and measurement equipment that keep your process visible.",
+    icon: "Gauge",
+    image: "/services/instrumentation.jpg",
+    items: [
+      { name: "Temperature sensors", image: "/services/instrumentation/temperature-sensors.jpg", description: "Accurate temperature monitoring for process and environmental control." },
+      { name: "Flow meters", image: "/services/instrumentation/flow-meters.jpg", description: "Precise measurement of liquid and gas flow rates across your process." },
+      { name: "Level sensors", image: "/services/instrumentation/level-sensors.jpg", description: "Reliable tank and vessel level detection for inventory and safety." },
+      { name: "Pressure sensors", image: "/services/instrumentation/pressure-sensors.jpg", description: "Continuous pressure monitoring for pipelines, vessels, and systems." },
+      { name: "HVAC sensors", image: "/services/instrumentation/hvac-sensors.jpg", description: "Sensors for air quality, humidity, and climate control systems." },
+      { name: "Proximity sensors", image: "/services/instrumentation/proximity-sensors.jpg", description: "Non-contact detection for automation, safety, and positioning tasks." },
+    ],
+  },
+  {
+    slug: "product-supplies",
+    title: "Product Supplies",
+    blurb: "Components and equipment sourced right, from breakers to PLCs.",
+    icon: "Package",
+    image: "/services/product-supplies.jpg",
+    items: [
+      { name: "MCB, MCCB, RCCB", image: "/services/products/mcb-mccb-rccb.jpg", description: "Circuit breakers and residual current devices for protection and safe isolation." },
+      { name: "Relays", image: "/services/products/relays.jpg", description: "Control and protection relays for switching and interlocking circuits." },
+      { name: "PLCs, HMIs, modules & software", image: "/services/products/plc-hmi.jpg", description: "Programmable controllers, operator interfaces, and the software to run them." },
+      { name: "Variable frequency drives", image: "/services/products/vfd.jpg", description: "Precise motor speed and torque control for energy savings and process control." },
+      { name: "Digital multimeters", image: "/services/products/multimeters.jpg", description: "Handheld meters for voltage, current, resistance, and continuity testing." },
+      { name: "Test & measurement equipment", image: "/services/products/test-equipment.jpg", description: "Instruments for diagnostics, calibration, and on-site verification." },
+      { name: "Push buttons & indicators", image: "/services/products/push-buttons.jpg", description: "Panel-mount controls and indicator lights for operator stations." },
+      { name: "Power, control & communication cables", image: "/services/products/cables.jpg", description: "Cabling for power distribution, control signals, and data communication." },
+      { name: "Networking equipment", image: "/services/products/networking.jpg", description: "Switches, routers, and industrial networking gear for connected systems." },
+    ],
+  },
+  {
+    slug: "control-automation",
+    title: "Control & Automation",
+    blurb: "Full control and automation system integration, backed by advanced power system studies that keep your network stable, compliant, and ready to scale.",
+    icon: "Cpu",
+    image: "/services/control-automation.jpg",
+    items: [
+      "Lighting systems",
+      "Building management systems",
+      "Temperature control systems",
+      "SCADA systems",
+      "MCC panels: DOL starters, star-delta, forward-reverse & VFD",
+      "Process automation",
+      "Energy management systems",
+      "Mains & genset changeover panels",
+    ],
+  },
+  {
+    slug: "consulting",
+    title: "Consulting",
+    blurb: "Expert guidance before, during, and after your project — hourly consultation, diagnostics, and turnkey engineering design.",
+    icon: "MessageSquare",
+    image: "/services/consulting.jpg",
+    items: [
+      "Diagnostics and troubleshooting services",
+      "Application design",
+      "PLC & drives programming training",
+      "Turnkey engineering project design",
+      "Hourly consultation services",
+    ],
+  },
+  {
+    slug: "power-quality-analysis",
+    title: "Power Quality Analysis",
+    blurb: "Energy data logging and power quality analysis to optimize efficiency, sizing, and long-term system performance.",
+    icon: "Activity",
+    image: "/services/power-quality-analysis.jpg",
+    items: [
+      "Active power consumption (kW) monitoring",
+      "Apparent power (kVA) analysis",
+      "Power factor (PF) assessment",
+      "Over-voltage and transient detection",
+      "Frequency deviation (Hz) monitoring",
+      "Remote, real-time power logging",
+    ],
+  },
+  {
+    slug: "scada",
+    title: "SCADA",
+    blurb: "Real-time visibility and control of your process, accessible from the control room or from anywhere in the field.",
+    icon: "Monitor",
+    image: "/services/scada.jpg",
+    longDescription: [
+      "SCADA — Supervisory Control and Data Acquisition — gives you a live window into your process. It combines networked communication with graphical Human Machine Interfaces (HMIs) to bring high-level supervisory control to plant operators, wherever they're stationed.",
+      "Our SCADA systems talk directly to your PLCs and field instruments, pulling data in real time and logging it for later analysis. Every reading, alarm, and trend is available on-screen, so your team can spot a problem before it becomes downtime.",
+      "We build SCADA solutions to be simple enough for operators to pick up quickly, while still giving engineers the depth of data they need to fine-tune performance.",
+    ],
+    items: [
+      "Real-time process monitoring dashboards",
+      "Historical data logging and trending",
+      "Remote supervisory control",
+      "Alarm management and notifications",
+      "Integration with existing PLCs and instrumentation",
+      "Custom HMI screen design",
+    ],
+  },
+  {
+    slug: "variable-frequency-drives",
+    title: "Variable Frequency Drives",
+    blurb: "Precise motor speed and torque control that cuts energy waste and extends equipment life.",
+    icon: "Waves",
+    image: "/services/variable-frequency-drives.jpg",
+    longDescription: [
+      "A Variable Frequency Drive is the most efficient way to control a three-phase AC induction motor, matching speed and torque to the actual demand of your process instead of running flat-out all the time.",
+      "We design, supply, install, and commission VFD systems for fans, pumps, conveyors, and other rotating equipment. Done right, this cuts energy costs, reduces mechanical wear, and gives you far more control over how your machinery behaves.",
+      "Our team is experienced across the major drive brands used in Kenyan industry, and we back every installation with after-sales support and troubleshooting.",
+    ],
+    items: [
+      "VFD sizing, supply, and installation",
+      "Motor speed and torque control",
+      "Energy-saving retrofits for existing motors",
+      "Fan, pump, and conveyor drive applications",
+      "Drive programming and parameter tuning",
+      "After-sales support and troubleshooting",
+    ],
+  },
+  {
+    slug: "industrial-wireless-communication",
+    title: "Industrial Wireless Communication",
+    blurb: "Reliable wireless links for monitoring and controlling remote sites without laying cable.",
+    icon: "Radio",
+    image: "/services/industrial-wireless-communication.jpg",
+    longDescription: [
+      "Not every site can be reached with cable. Remote pumping stations, tanks, and outlying equipment often sit kilometers from the nearest control room. Industrial wireless communication closes that gap.",
+      "We deploy secure, reliable wireless systems that transmit both digital and analogue signals, including flow, pressure, level, and temperature, back to a central point, so your team has visibility without the cost of trenching cable across the site.",
+      "This is especially useful for water and sewerage infrastructure, agricultural sites, and any operation where sites are spread out.",
+    ],
+    items: [
+      "Remote site monitoring without cabling",
+      "Level, temperature, and flow signal transmission",
+      "Water and sewerage infrastructure applications",
+      "Pumping stations and well point systems",
+      "Leak monitoring",
+      "Long-range, multi-station wireless networks",
+    ],
+  },
+  {
+    slug: "pump-monitoring-systems",
+    title: "Pump Monitoring Systems",
+    blurb: "Catch pump and motor faults early, before they become costly failures.",
+    icon: "Droplets",
+    image: "/services/pump-monitoring-systems.jpg",
+    longDescription: [
+      "A large share of unplanned downtime comes from pumps and rotating equipment that fail without warning. Most maintenance schedules are either too early, wasting resources, or too late, after the damage is already done.",
+      "Our pump monitoring solution tracks the active electrical power drawn by your pumps and motors in real time. Changes in that power signature reveal wear, blockages, or developing faults long before a full breakdown.",
+      "The result: maintenance timed to the actual condition of your equipment, not a generic calendar.",
+    ],
+    items: [
+      "Continuous pump and motor power monitoring",
+      "Early fault detection via power signature analysis",
+      "Reduced unplanned downtime",
+      "Condition-based maintenance scheduling",
+      "Integration with existing control systems",
+    ],
+  },
+];
+
+export const PROCESS = [
+  { t: "Assess", d: "We walk the site, review existing drawings, and scope the real problem before quoting." },
+  { t: "Design", d: "Panel layouts, control logic, and cable schedules are drawn up and signed off before we touch a wire." },
+  { t: "Build & Install", d: "Panels are built and tested on our bench, then installed and commissioned on site." },
+  { t: "Support", d: "Documentation is handed over, and we stay reachable for maintenance and call-outs after go-live." },
+];
+
+export const VALUES = [
+  { t: "Professionalism", d: "Every job handled by trained, accountable technicians." },
+  { t: "Innovation", d: "Creative engineering solutions, not just the standard fix." },
+  { t: "Quality", d: "Work built to run reliably long after we've left site." },
+];
+
+export const MISSION = "To deliver innovative, reliable, and safety-driven electrical, automation, and instrumentation solutions that empower industries across Kenya to operate at peak efficiency.";
+
+export const VISION = "To be East Africa's most trusted partner for industrial automation and electrical engineering — recognized for precision, integrity, and forward-thinking solutions.";
+
+export const STATS = [
+  { v: "150+", l: "Projects Completed" },
+  { v: "9+", l: "Years of Experience" },
+  { v: "60+", l: "Satisfied Clients" },
+  { v: "8+", l: "Sectors Served" },
+];
+
+export const CERTIFICATIONS = [
+  "EPRA-Aligned Practice",
+  "EBK & IEK Standards",
+  "ISO-Aligned Safety Systems",
+  "NCA-Compliant Installations",
+];
+
+export const RELATED_SERVICES = {
+  "electrical-installations": ["control-automation", "power-quality-analysis"],
+  "instrumentation": ["pump-monitoring-systems", "power-quality-analysis"],
+  "product-supplies": ["variable-frequency-drives", "scada"],
+  "control-automation": ["scada", "variable-frequency-drives"],
+  "consulting": ["electrical-installations", "control-automation"],
+  "power-quality-analysis": ["electrical-installations", "instrumentation"],
+  "scada": ["control-automation", "product-supplies"],
+  "variable-frequency-drives": ["product-supplies", "control-automation"],
+  "industrial-wireless-communication": ["pump-monitoring-systems", "instrumentation"],
+  "pump-monitoring-systems": ["instrumentation", "industrial-wireless-communication"],
+};
+
+
+export const BLOG_POSTS = [
+  {
+    slug: "signs-your-control-panel-needs-attention",
+    title: "Signs your control panel needs attention before it fails",
+    tag: "Maintenance",
+    tagColor: "text-amber-500 bg-amber-500/10",
+    image: "/blog/signs-your-control-panel-needs-attention.jpg",
+    content: [
+      "Most control panel failures don't happen out of nowhere. There are usually warning signs weeks or months before a breakdown — the challenge is that they're easy to miss if nobody is looking for them.",
+      "Discoloured or heat-stained components inside the panel are one of the clearest signs. Overheating leaves visible marks on terminals, breakers, and wiring insulation long before anything actually fails. If you open a panel and see browning or a faint burnt smell, that's not cosmetic — it's a fault developing in real time.",
+      "Frequent nuisance tripping is another red flag. A breaker or overload relay that trips occasionally for no obvious reason is often reacting to a real underlying issue: a loose connection, a failing component drawing excess current, or a load that has grown beyond what the panel was originally sized for.",
+      "Loose or corroded terminals are easy to overlook but are one of the most common causes of unplanned downtime. Vibration, thermal cycling, and time all work against tight connections. A scheduled inspection that includes torque-checking terminals catches this before it becomes an arc fault.",
+      "Unusual noise — humming, buzzing, or clicking that wasn't there before — is worth investigating immediately. Contactors and relays have a normal operating sound; anything that changes noticeably is signaling wear.",
+      "The fix for all of these is the same: scheduled inspection, not reactive repair. A short annual or bi-annual check by someone who knows what to look for costs a fraction of what an unplanned shutdown does.",
+    ],
+  },
+  {
+    slug: "what-a-plc-retrofit-actually-involves",
+    title: "What a PLC retrofit actually involves",
+    tag: "Automation",
+    tagColor: "text-sky-600 bg-sky-500/10",
+    image: "/blog/what-a-plc-retrofit-actually-involves.jpg",
+    content: [
+      "A PLC retrofit sounds like a simple swap — old controller out, new one in — but in practice it's closer to a small engineering project than a parts replacement.",
+      "It starts with understanding the existing system fully. Before anything is touched, we document the current program logic, I/O wiring, and any quirks operators have learned to work around over the years. Old systems often carry undocumented logic changes made during past emergencies, and losing that knowledge during a retrofit is how new problems get introduced.",
+      "Next comes selecting the replacement hardware. This isn't just about brand preference — I/O count, communication protocols, memory requirements, and physical panel space all narrow the options. Where possible, we choose hardware that can reuse existing wiring terminations to reduce downtime during changeover.",
+      "The programming itself is usually the bulk of the work. Old ladder logic or function block programs are translated, not simply copied, into the new platform, since instruction sets and addressing rarely map one-to-one between manufacturers. This is also the point where obvious inefficiencies in the original program get cleaned up.",
+      "Testing happens in stages: first on the bench with simulated inputs, then on-site during a planned shutdown window, running the machine through every mode of operation before it goes back into production. Skipping staged testing is the single most common cause of retrofit projects overrunning their downtime window.",
+      "Finally, documentation and training. A retrofit is only successful long-term if the operators and maintenance team understand the new system — updated wiring diagrams, program backups, and a short handover session are part of every retrofit we deliver.",
+    ],
+  },
+  {
+    slug: "maintenance-contracts-for-multi-shift-plants",
+    title: "Getting maintenance contracts right for multi-shift plants",
+    tag: "Case study",
+    tagColor: "text-violet-600 bg-violet-500/10",
+    image: "/blog/maintenance-contracts-for-multi-shift-plants.jpg",
+    content: [
+      "Plants running two or three shifts face a maintenance problem single-shift operations don't: there's rarely a clean window when the line is actually stopped and safe to work on.",
+      "The first adjustment is scheduling. A maintenance contract built around a standard business-hours service window doesn't fit a plant that's running at 2am. Response times, call-out availability, and even routine inspection slots need to be structured around the plant's actual production calendar, not a generic business day.",
+      "The second is spare parts strategy. With less downtime available for troubleshooting, having critical spares on-site, or at least reserved with a fast-access agreement, matters more than in a single-shift operation where a day's delay is less costly. Contracts should specify which parts are stocked, where, and what the replacement lead time is for anything that isn't.",
+      "Communication handover is the piece that's easiest to get wrong. If an issue is flagged during a night shift, the maintenance provider needs a clear channel to both the outgoing and incoming shift supervisors, otherwise fixes get delayed simply because the right person wasn't told in time.",
+      "Finally, a good multi-shift maintenance contract builds in a review cadence — monthly or quarterly checkpoints to look at recurring fault patterns across shifts. A machine that keeps tripping only on the night shift, for example, might point to a load, temperature, or staffing pattern worth investigating rather than a random fault.",
+      "None of this is complicated, but it does require the contract to be written around how the plant actually operates, not adapted from a template built for a single eight-hour day.",
+    ],
+  },
+  {
+    slug: "power-quality-analysis-before-solar",
+    title: "Why power quality analysis matters before you install solar",
+    tag: "Power Quality",
+    tagColor: "text-emerald-600 bg-emerald-500/10",
+    image: "/blog/power-quality-analysis-before-solar.jpg",
+    content: [
+      "It's tempting to treat solar sizing as a simple math problem: add up your loads, add some margin, and order panels and an inverter to match. In practice, the electrical environment you're feeding into matters just as much as the load total.",
+      "Voltage fluctuations and existing harmonic distortion on site can affect how well an inverter synchronizes with your supply, and in some cases can trigger nuisance trips or reduce inverter lifespan. A power quality audit before installation catches this while it's still cheap to address.",
+      "Power factor is another overlooked factor. A site with a poor power factor from old motors or fluorescent lighting will size differently for solar offset than one with a clean, well-corrected load profile. Sizing off nameplate kW alone can lead to a system that underperforms against what was promised.",
+      "Logging actual load data over a representative period — not just a single-day snapshot — reveals the real demand curve, including peak surges from equipment starts that a quick calculation would miss entirely.",
+      "The cost of a proper pre-installation power quality assessment is small compared to a solar system that's undersized, oversized, or fighting compatibility issues with the existing supply from day one.",
+    ],
+  },
+  {
+    slug: "choosing-the-right-vfd",
+    title: "Choosing the right VFD for your motor application",
+    tag: "Automation",
+    tagColor: "text-sky-600 bg-sky-500/10",
+    image: "/blog/choosing-the-right-vfd.jpg",
+    content: [
+      "Picking a Variable Frequency Drive by matching its kW rating to the motor nameplate is the most common shortcut we see — and it's often wrong in ways that only show up after installation.",
+      "Motor current, not just kW, should drive sizing. Two motors with the same kW rating can draw meaningfully different current depending on efficiency class and voltage, so the drive's rated output current needs to clear the motor's full-load amps with margin, not just match the kW label.",
+      "Overload duty matters for applications with frequent starts or variable torque loads — conveyors, crushers, and mixers all put different demands on a drive than a simple constant-speed pump. Undersizing here shows up as nuisance trips under normal operating conditions.",
+      "Enclosure rating is easy to overlook in a rush to get a drive installed. A dusty or humid environment needs an appropriately rated enclosure or cabinet, not a standard IP20 drive bolted to a wall in a workshop.",
+      "Braking requirements are the last piece people forget. If your application needs to decelerate quickly under load — a crane, a centrifuge, certain conveyor setups — you need a drive with dynamic braking capability or an external braking resistor, decided before commissioning, not after the first overspeed fault.",
+      "A short conversation about the actual application, not just the motor's nameplate, is what separates a drive that runs reliably for years from one that needs troubleshooting in its first month.",
+    ],
+  },
+  {
+    slug: "scada-vs-manual-monitoring",
+    title: "SCADA vs manual monitoring: what actually changes on the plant floor",
+    tag: "Automation",
+    tagColor: "text-indigo-600 bg-indigo-500/10",
+    image: "/blog/scada-vs-manual-monitoring.jpg",
+    content: [
+      "Manual monitoring — an operator walking rounds with a clipboard or checking gauges on a set schedule — has worked for decades, and for some small, single-line operations, it still works fine. The question is when it stops being enough.",
+      "The biggest gap manual rounds leave is time between checks. If an issue develops between scheduled rounds, it runs unnoticed until the next check, however long that gap is. SCADA closes that gap to seconds, catching deviations as they start rather than after they've compounded.",
+      "Human error is the second factor. A manual reading depends on someone being present, awake, and recording it correctly. Multiply that across multiple shifts and multiple readings per shift, and small gaps and transcription errors accumulate over a year in ways that are hard to see until you compare against continuous logged data.",
+      "That said, SCADA isn't automatically the right call for every site. A single small line with one or two critical parameters and an attentive operator on-site full time may genuinely not need it yet — the cost only pays off once the number of parameters, the size of the site, or the cost of a missed deviation grows large enough.",
+      "The honest answer for most growing operations is that SCADA becomes worthwhile exactly when manual monitoring starts requiring more people, more discipline, and more paperwork just to maintain the same level of visibility you already have.",
+    ],
+  },
+  {
+    slug: "instrumentation-calibration-frequency",
+    title: "Instrumentation calibration: how often is often enough",
+    tag: "Instrumentation",
+    tagColor: "text-teal-600 bg-teal-500/10",
+    image: "/blog/instrumentation-calibration-frequency.jpg",
+    content: [
+      "There's no single correct calibration interval that applies to every sensor — the right frequency depends on a combination of factors specific to each instrument and its application.",
+      "Manufacturer specification is the starting point, not the final answer. Manufacturers publish a recommended interval based on typical drift characteristics, but 'typical' conditions rarely match every installation.",
+      "How critical the measurement is to safety or product quality pushes the interval shorter. A temperature sensor on a cold chain monitoring system that determines whether product gets rejected deserves tighter calibration discipline than one used for general trend monitoring.",
+      "Environmental conditions matter more than most people expect. Instruments exposed to vibration, temperature extremes, humidity, or corrosive atmospheres drift faster than the same model in a controlled environment, and calibration intervals should reflect that reality rather than the manufacturer's lab-tested baseline.",
+      "The most reliable approach is to track drift history per instrument rather than applying a blanket schedule. If a sensor consistently comes back within tolerance at every check, the interval can often be extended. If it's drifting close to the limit each time, it needs tightening — or replacing.",
+      "A calibration log that actually gets reviewed, not just filed, is what turns this from guesswork into a system that protects both product quality and compliance.",
+    ],
+  },
+  {
+    slug: "before-signing-electrical-installation-contract",
+    title: "What to check before signing an electrical installation contract",
+    tag: "Electrical",
+    tagColor: "text-rose-600 bg-rose-500/10",
+    image: "/blog/before-signing-electrical-installation-contract.jpg",
+    content: [
+      "An electrical installation contract is where problems either get prevented or get baked in for the rest of the project. A few checks before signing save a lot of disputes later.",
+      "Confirm the contractor's licensing and certifications directly, not just their claim of having them. In Kenya this means checking current EPRA and relevant board registrations rather than taking a business card at face value.",
+      "Scope of work should be specific enough that there's no ambiguity about what's included. \"Complete electrical installation\" invites disagreement later; a scope that lists panel types, cable specifications, and points of connection does not.",
+      "Materials matter as much as labour. A contract should specify actual brands or equivalent-quality standards for major components — breakers, cables, panels — rather than leaving it open to whatever's cheapest at the time of purchase.",
+      "Warranty terms deserve a specific clause, not an assumption. Ask what's covered, for how long, and whether it covers just materials or workmanship too.",
+      "Finally, confirm that as-built documentation and testing certificates are a contractual deliverable, not an afterthought. Without them, you inherit an installation nobody can properly maintain or troubleshoot down the line.",
+    ],
+  },
+];
+
+export const BRANDS = [
+  { name: "Siemens", logo: "/brands/siemens.jpg" },
+  { name: "Schneider Electric", logo: "/brands/schneider.jpg" },
+  { name: "ABB", logo: "/brands/abb.jpg" },
+  { name: "Fluke", logo: "/brands/fluke.jpg" },
+  { name: "Phoenix Contact", logo: "/brands/phoenix-contact.jpg" },
+  { name: "Greystone", logo: "/brands/greystone.jpg" },
+];
+
+===== ./src/pages/About.jsx =====
+import {
+  Target, Compass, Gem, ShieldCheck, Award, TrendingUp,
+  Clock, Users, Layers, FileCheck2, BadgeCheck, Quote, Download,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import SectionHeading from "../components/ui/SectionHeading";
+import { MISSION, VISION, STATS, CERTIFICATIONS } from "../data";
+
+const values = [
+  { t: "Our mission", d: "Deliver automation and electrical systems that run reliably, safely, and without surprises.", icon: Target },
+  { t: "Our approach", d: "Assess properly, wire cleanly, document everything, and stay reachable after handover.", icon: Compass },
+  { t: "Our standard", d: "Every panel and every line of PLC logic is built the way we'd want it built for our own plant.", icon: Gem },
+];
+
+const milestones = [
+  ["Founded", "AAS opens, taking on panel building and residential-to-light-industrial wiring."],
+  ["First major contract", "Automation retrofit for a mid-size manufacturing client."],
+  ["Team expansion", "Brought on dedicated PLC programming and maintenance staff."],
+  ["Today", "Full-service automation, panel building, and system integration across multiple sectors."],
+];
+
+/* Abstract schematic / circuit-trace motif — grounded in the electrical & automation subject matter */
+function SchematicArt() {
+  return (
+    <svg viewBox="0 0 420 480" className="w-full h-full" fill="none">
+      <g stroke="#2563eb" strokeWidth="1.5" opacity="0.35">
+        <path d="M40 40 H180 V120 H340" />
+        <path d="M180 120 V220" />
+        <path d="M40 200 H120 V320 H260 V400" />
+        <path d="M260 320 H340 V440" />
+        <path d="M120 320 V440" />
+        <path d="M340 120 V60 H400" />
+      </g>
+      <g stroke="#38bdf8" strokeWidth="1.5" opacity="0.3" strokeDasharray="2 6">
+        <path d="M40 40 V200" />
+        <path d="M260 220 V320" />
+        <path d="M180 220 H260" />
+      </g>
+      {[
+        [40, 40], [180, 40], [180, 120], [340, 120], [40, 200],
+        [120, 200], [120, 320], [260, 320], [260, 400], [340, 440],
+        [120, 440], [180, 220], [260, 220], [400, 60],
+      ].map(([cx, cy], i) => (
+        <circle key={i} cx={cx} cy={cy} r={i % 3 === 0 ? 5 : 3} fill={i % 3 === 0 ? "#2563eb" : "#38bdf8"} opacity="0.5" />
+      ))}
+      <rect x="160" y="100" width="40" height="24" rx="3" stroke="#2563eb" strokeWidth="1.5" opacity="0.4" />
+      <rect x="240" y="300" width="40" height="24" rx="3" stroke="#38bdf8" strokeWidth="1.5" opacity="0.4" />
+    </svg>
+  );
+}
+
+/* Floating quote card — rounded, shadowed, sits on white with room around it */
+function FloatingQuoteCard({ label, text, dark, accent }) {
+  return (
+    <div
+      className="relative rounded-3xl p-8 md:p-10"
+      style={{
+        background: dark ? "#0a1a35" : "#eef4fc",
+        borderLeft: `5px solid ${accent}`,
+        boxShadow: dark
+          ? "0 20px 45px -20px rgba(10,26,53,0.45)"
+          : "0 20px 45px -24px rgba(37,99,235,0.22)",
+      }}
+    >
+      <Quote size={34} style={{ color: accent }} fill={accent} className="mb-5" />
+      <p
+        className="text-xs font-bold uppercase tracking-[0.15em] mb-4"
+        style={{ color: dark ? "rgba(255,255,255,0.55)" : "rgba(10,26,53,0.5)" }}
+      >
+        {label}
+      </p>
+      <p
+        className="text-xl md:text-2xl leading-relaxed italic"
+        style={{
+          fontFamily: "Georgia, 'Times New Roman', serif",
+          color: dark ? "rgba(255,255,255,0.95)" : "#0a1a35",
+        }}
+      >
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/* Full-bleed quote block — breaks out of container-page to run edge to edge */
+function QuoteBlock({ label, text, dark, accent }) {
+  return (
+    <div
+      className="relative w-screen overflow-hidden"
+      style={{ marginLeft: "calc(50% - 50vw)", background: dark ? "#0a1a35" : "#eef4fc" }}
+    >
+      <div
+        className="absolute right-8 md:right-24 bottom-0 w-72 h-72 rounded-full pointer-events-none"
+        style={{
+          border: `1px solid ${dark ? "rgba(255,255,255,0.06)" : "rgba(10,26,53,0.05)"}`,
+          boxShadow: `0 0 0 24px ${dark ? "rgba(255,255,255,0.03)" : "rgba(10,26,53,0.025)"}, 0 0 0 48px ${dark ? "rgba(255,255,255,0.02)" : "rgba(10,26,53,0.018)"}`,
+        }}
+      />
+      <div
+        className="container-page relative py-16 md:py-20 pl-10 md:pl-16"
+        style={{ borderLeft: `5px solid ${accent}` }}
+      >
+        <Quote size={40} style={{ color: accent }} fill={accent} className="mb-6" />
+        <p
+          className="text-xs font-bold uppercase tracking-[0.15em] mb-5"
+          style={{ color: dark ? "rgba(255,255,255,0.55)" : "rgba(10,26,53,0.5)" }}
+        >
+          {label}
+        </p>
+        <p
+          className="text-2xl md:text-3xl leading-relaxed max-w-2xl italic"
+          style={{
+            fontFamily: "Georgia, 'Times New Roman', serif",
+            color: dark ? "rgba(255,255,255,0.95)" : "#0a1a35",
+          }}
+        >
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function About() {
+  return (
+    <div className="bg-white">
+      {/* HERO */}
+      <div className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(1100px 480px at 88% -10%, rgba(37,99,235,0.07), transparent 60%)" }}
+        />
+        <div className="absolute top-0 right-0 w-[26rem] h-[30rem] hidden md:block opacity-70 pointer-events-none">
+          <SchematicArt />
+        </div>
+        <div className="container-page relative pt-16 pb-14 md:pt-28 md:pb-20">
+          <p className="flex items-center gap-2 mb-5 text-sm font-medium" style={{ color: "#2563eb" }}>
+            <span className="w-8 h-px" style={{ background: "#2563eb" }} />
+            About us
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold text-navy leading-[1.15] md:leading-[1.08] tracking-tight max-w-2xl">
+            Started in a workshop, grown on referrals.
+          </h1>
+          <p className="text-gray-600 mt-6 max-w-lg text-base md:text-lg leading-relaxed">
+            AAS was built on a simple idea: do the electrical and automation work properly the
+            first time, so the client never has to think about it again. From single panel
+            installations to full plant automation, our team handles design, supply,
+            installation, and commissioning under one roof.
+          </p>
+        </div>
+      </div>
+
+      {/* MISSION & VISION — full-bleed quote blocks, stacked flush */}
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.5 }}>
+        <QuoteBlock label="Our Mission" text={MISSION} dark accent="#2563eb" />
+      </motion.div>
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.5, delay: 0.1 }}>
+        <QuoteBlock label="Our Vision" text={VISION} dark={false} accent="#38bdf8" />
+      </motion.div>
+
+      {/* STATS — full-bleed dark strip beneath the quote blocks */}
+      <div className="relative w-screen overflow-hidden" style={{ marginLeft: "calc(50% - 50vw)", background: "#0a1a35" }}>
+        <div
+          className="absolute right-8 md:right-24 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full pointer-events-none"
+          style={{
+            border: "1px solid rgba(255,255,255,0.06)",
+            boxShadow: "0 0 0 24px rgba(255,255,255,0.03), 0 0 0 48px rgba(255,255,255,0.02)",
+          }}
+        />
+        <div className="container-page relative py-8 md:py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/10">
+            {STATS.map((s, i) => {
+              const icons = [Layers, Clock, Users, TrendingUp];
+              const StatIcon = icons[i % icons.length];
+              const isRightEdge = i % 2 === 1;
+              return (
+                <div
+                  key={s.l}
+                  className={`px-4 py-4 md:px-6 md:py-0 first:pl-0 last:md:pr-0 flex items-center gap-3 ${isRightEdge ? "md:border-r-0" : ""}`}
+                  style={isRightEdge ? { borderRightWidth: 0 } : {}}
+                >
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
+                    style={{ background: "rgba(255,255,255,0.06)" }}
+                  >
+                    <StatIcon size={15} style={{ color: "#38bdf8" }} />
+                  </div>
+                  <div>
+                    <div className="text-xl md:text-2xl font-bold text-white leading-none tracking-tight">{s.v}</div>
+                    <div className="text-[0.65rem] text-white/50 mt-1 uppercase tracking-wide">{s.l}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* CERTIFICATIONS */}
+      <div className="container-page py-14 md:py-16">
+        <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Certifications & compliance</p>
+        <div className="flex flex-wrap gap-y-8">
+          {CERTIFICATIONS.map((c, i) => {
+            const icons = [ShieldCheck, BadgeCheck, FileCheck2, Award];
+            const CertIcon = icons[i % icons.length];
+            return (
+              <div
+                key={c}
+                className={`flex items-center gap-3 pr-8 md:pr-10 ${i > 0 ? "pl-8 md:pl-10 border-l" : ""}`}
+                style={i > 0 ? { borderColor: "rgba(37,99,235,0.15)" } : {}}
+              >
+                <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style={{ background: "rgba(37,99,235,0.08)" }}>
+                  <CertIcon size={17} style={{ color: "#2563eb" }} />
+                </div>
+                <span className="text-sm font-medium text-navy leading-snug max-w-[9rem]">{c}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* WHAT DRIVES US — floating quote cards on white */}
+      <div className="container-page py-16 md:py-20">
+        <SectionHeading eyebrow="What drives us" title="Mission, approach, standard" />
+        <div className="max-w-2xl mx-auto space-y-6">
+          {values.map((v, i) => (
+            <motion.div
+              key={v.t}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <FloatingQuoteCard
+                label={v.t}
+                text={v.d}
+                dark={i % 2 === 0}
+                accent={i % 2 === 0 ? "#2563eb" : "#38bdf8"}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* MILESTONES */}
+      <div className="container-page py-16 md:py-20 pb-0">
+        <SectionHeading eyebrow="Our story" title="Milestones" align="left" />
+        <div className="max-w-2xl relative">
+          <div
+            className="absolute left-6 top-2 bottom-2 w-px"
+            style={{ background: "linear-gradient(to bottom, #2563eb, rgba(37,99,235,0.1))" }}
+          />
+          <div className="space-y-7">
+            {milestones.map(([t, d], i) => (
+              <motion.div
+                key={t}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.45, delay: i * 0.08 }}
+                className="relative flex gap-5"
+              >
+                <div
+                  className="relative shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm"
+                  style={{
+                    background: "#0a1a35",
+                    color: "#38bdf8",
+                    boxShadow: "0 0 0 4px #ffffff, 0 0 14px rgba(37,99,235,0.5)",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="pt-2">
+                  <div className="text-navy font-semibold text-lg">{t}</div>
+                  <div className="text-gray-600 text-sm mt-1 max-w-md leading-relaxed">{d}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* DOWNLOAD COMPANY PROFILE */}
+      <div className="container-page pt-10 md:pt-14 pb-8 md:pb-10">
+        <div
+          className="relative overflow-hidden rounded-3xl p-6 md:p-8"
+          style={{
+            background: "linear-gradient(135deg, #2563eb 0%, #0a1a35 60%, #0a1a35 100%)",
+            boxShadow: "0 20px 50px -20px rgba(37,99,235,0.5)",
+          }}
+        >
+          <div
+            className="absolute -top-10 -left-10 w-56 h-56 rounded-full pointer-events-none"
+            style={{ background: "radial-gradient(circle, rgba(96,165,250,0.35), transparent 70%)" }}
+          />
+
+          <div className="relative flex items-start justify-between">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-white" />
+              <span className="text-xs font-bold uppercase tracking-widest text-white/80">
+                Company Profile
+              </span>
+            </div>
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+              style={{ background: "rgba(255,255,255,0.12)" }}
+            >
+              <Download size={20} className="text-white" />
+            </div>
+          </div>
+
+          <h3 className="relative text-2xl md:text-3xl font-bold text-white mt-5">
+            Get to know AAS
+          </h3>
+          <p className="relative text-white/70 text-sm mt-2 max-w-sm">
+            A detailed PDF overview of our services, capabilities, and past projects.
+          </p>
+
+          <div className="relative h-px my-6" style={{ background: "rgba(255,255,255,0.15)" }} />
+
+          <div className="relative flex items-center justify-between">
+            <span className="text-sm text-white/60">Tap to download</span>
+            <a
+              href="/company-profile.pdf"
+              download
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-transform hover:scale-105"
+              style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}
+            >
+              Download Now
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+===== ./src/pages/Home.jsx =====
+import { Link } from "react-router-dom";
+import { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell, ChevronRight, ArrowUpRight, Quote, CheckCircle2, Search, PenTool, Wrench, LifeBuoy } from "lucide-react";
+import { SERVICES, VALUES, PROCESS } from "../data";
+import WhatsAppButton from "../components/WhatsAppButton";
+import WhyChooseUs from "../components/sections/WhyChooseUs";
+import SectorsServed from "../components/sections/SectorsServed";
+import Hero from "../components/sections/Hero";
+
+const ICONS = { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell };
+const ACCENTS = {
+  Zap: { tile: "amber", text: "text-amber-500" },
+  Gauge: { tile: "teal", text: "text-teal-600" },
+  Package: { tile: "violet", text: "text-violet-600" },
+  Cpu: { tile: "sky", text: "text-sky-600" },
+  MessageSquare: { tile: "rose", text: "text-rose-600" },
+  Activity: { tile: "emerald", text: "text-emerald-600" },
+  Monitor: { tile: "indigo", text: "text-indigo-600" },
+  Waves: { tile: "orange", text: "text-orange-600" },
+  Radio: { tile: "cyan", text: "text-cyan-600" },
+  Droplets: { tile: "fuchsia", text: "text-fuchsia-600" },
+  Bell: { tile: "lime", text: "text-lime-600" },
+};
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+
+      {/* Services */}
+      <section className="container-page section-pad-sm">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <p className="tag-chip mb-3"><span className="tag-dot" /> What we do</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-navy">Our solutions</h2>
+          </div>
+          <Link to="/services" className="text-brand text-sm font-semibold inline-flex items-center gap-1 shrink-0">
+            All services <ChevronRight size={15} />
+          </Link>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {SERVICES.map((s) => {
+            const Icon = ICONS[s.icon];
+            const a = ACCENTS[s.icon];
+            return (
+              <Link key={s.slug} to={`/services/${s.slug}`} className="card-surface overflow-hidden group">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-7">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-12 h-12 rounded-2xl icon-tile-${a.tile} shadow-soft flex items-center justify-center shrink-0`}>
+                      <Icon className="text-white" size={22} />
+                    </div>
+                    <h3 className="text-xl font-bold text-navy">{s.title}</h3>
+                  </div>
+                  <p className="text-gray-600 text-sm mt-2">{s.blurb}</p>
+                  <span className="inline-flex items-center gap-1 text-brand text-sm font-medium mt-4">
+                    See what's included <ChevronRight size={14} />
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <WhyChooseUs />
+      <SectorsServed />
+
+      {/* Process */}
+      <section className="relative overflow-hidden bg-offwhite">
+        <div className="absolute inset-0 blueprint-grid blueprint-fade pointer-events-none" />
+        <div className="container-page section-pad-sm relative">
+          <p className="tag-chip mb-3"><span className="tag-dot" /> How we work</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-14">From first call to running system</h2>
+          <div className="relative grid sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12">
+            <div className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-amber-400 via-sky-400 to-violet-400 opacity-50" />
+            {PROCESS.map((step, i) => {
+              const icons = [Search, PenTool, Wrench, LifeBuoy];
+              const tiles = ["icon-tile-amber", "icon-tile-sky", "icon-tile-teal", "icon-tile-violet"];
+              const Icon = icons[i];
+              return (
+                <div key={step.t} className="relative group flex flex-col items-center md:items-start text-center md:text-left">
+                  <div className={`relative z-10 w-16 h-16 rounded-2xl ${tiles[i]} shadow-soft-lg flex items-center justify-center mb-5 group-hover:-translate-y-1 transition-transform duration-300`}>
+                    <Icon className="text-white" size={26} />
+                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-white border-2 border-navy/10 text-navy text-xs font-bold flex items-center justify-center shadow-soft">
+                      {i + 1}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-navy text-lg">{step.t}</h4>
+                  <p className="text-gray-600 text-sm mt-2 leading-relaxed max-w-[220px]">{step.d}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="container-page section-pad-sm">
+        <div className="relative glass-panel rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+          <div className="glow-orb w-64 h-64 -top-20 -right-20 opacity-[0.10]" style={{ background: "#1a63d6" }} />
+          <img
+            src="https://picsum.photos/seed/aas-testimonial/300/300"
+            alt="Client"
+            className="relative w-20 h-20 rounded-full object-cover shrink-0 ring-4 ring-white"
+          />
+          <div className="relative">
+            <Quote className="text-brand/40 mb-3" size={26} />
+            <p className="text-lg text-navy leading-snug max-w-2xl">
+              They rewired our fill line over a weekend so we didn't lose a single production day.
+            </p>
+            <p className="text-gray-500 text-sm mt-3">Operations Manager, beverage manufacturer</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container-page section-pad-sm">
+        <div className="relative rounded-2xl bg-brand p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-soft-lg overflow-hidden">
+          <div className="absolute inset-0 blueprint-grid opacity-40" style={{ filter: "invert(1)" }} />
+          <div className="relative">
+            <h3 className="text-2xl font-bold text-white">Have a system that needs attention?</h3>
+            <p className="text-white/80 mt-2">Tell us what's happening and we'll get back to you the same day.</p>
+          </div>
+          <div className="relative"><WhatsAppButton /></div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+===== ./src/pages/Services.jsx =====
+import { Link } from "react-router-dom";
+import { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell, ArrowUpRight } from "lucide-react";
+import { SERVICES } from "../data";
+
+const ICONS = { Zap, Gauge, Package, Cpu, MessageSquare, Activity, Monitor, Waves, Radio, Droplets, Bell };
+const ACCENTS = {
+  Zap: { tile: "amber", text: "text-amber-500" },
+  Gauge: { tile: "teal", text: "text-teal-600" },
+  Package: { tile: "violet", text: "text-violet-600" },
+  Cpu: { tile: "sky", text: "text-sky-600" },
+  MessageSquare: { tile: "rose", text: "text-rose-600" },
+  Activity: { tile: "emerald", text: "text-emerald-600" },
+  Monitor: { tile: "indigo", text: "text-indigo-600" },
+  Waves: { tile: "orange", text: "text-orange-600" },
+  Radio: { tile: "cyan", text: "text-cyan-600" },
+  Droplets: { tile: "fuchsia", text: "text-fuchsia-600" },
+  Bell: { tile: "lime", text: "text-lime-600" },
+};
+
+export default function Services() {
+  return (
+    <section className="relative overflow-hidden">
+        <div className="absolute inset-0 blueprint-grid blueprint-fade pointer-events-none" />
+      <div className="glow-orb w-96 h-96 -top-32 -left-24 opacity-[0.10]" style={{ background: "#1a63d6" }} />
+      <div className="container-page relative pt-16 pb-20 md:pt-20 md:pb-24">
+        <p className="tag-chip mb-3"><span className="tag-dot" /> Services</p>
+        <h1 className="text-3xl font-bold text-navy mb-3 max-w-xl">What we can take off your hands</h1>
+        <p className="text-gray-600 max-w-lg mb-12">Four areas, one accountable crew — from first sketch to final commissioning.</p>
+
+        <div className="space-y-6">
+          {SERVICES.map((s, i) => {
+            const Icon = ICONS[s.icon];
+            const a = ACCENTS[s.icon];
+            const reverse = i % 2 === 1;
+            return (
+              <Link
+                key={s.slug}
+                to={`/services/${s.slug}`}
+                className={`card-surface overflow-hidden flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} group`}
+              >
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full md:w-72 h-44 md:h-auto object-cover group-hover:scale-105 transition-transform duration-300 shrink-0"
+                />
+                <div className="p-7 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-11 h-11 rounded-2xl icon-tile-${a.tile} shadow-soft flex items-center justify-center shrink-0`}>
+                      <Icon className="text-white" size={20} />
+                    </div>
+                    <h3 className="text-lg font-bold text-navy">{s.title}</h3>
+                  </div>
+                  <p className="text-gray-600 text-sm mt-2 max-w-md">{s.blurb}</p>
+                  <span className="inline-flex items-center gap-1 text-brand text-sm font-medium mt-4 w-fit">
+                    View details <ArrowUpRight size={14} />
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+===== ./src/pages/Team.jsx =====
+export default function Team() {
+  const rings = ["ring-amber-400/50", "ring-sky-400/50", "ring-teal-400/50", "ring-violet-400/50", "ring-brand/40", "ring-amber-400/50"];
+  const people = [
+    ["Lead Automation Engineer", "Oversees PLC programming, control system design, and final commissioning sign-off."],
+    ["Chief Electrician", "Leads panel building and on-site wiring crews across every installation."],
+    ["Field Service Technician", "Handles maintenance call-outs, diagnostics, and after-hours emergency response."],
+    ["Instrumentation Specialist", "Selects, calibrates, and installs sensors, meters, and process measurement hardware."],
+    ["Project Coordinator", "Keeps site schedules, client communication, and material logistics on track."],
+    ["Panel Design Draughtsman", "Produces wiring schematics, panel layouts, and as-built documentation."],
+  ];
+  return (
+    <section className="container-page section-pad-sm">
+      <p className="tag-chip mb-3"><span className="tag-dot" /> People</p>
+      <h1 className="text-3xl font-bold text-navy mb-4">The team behind the work</h1>
+      <p className="text-gray-600 max-w-xl mb-12">
+        A small, accountable crew — every job is handled by someone who was in the room when it was scoped.
+      </p>
+      <div className="grid md:grid-cols-3 gap-8">
+        {people.map(([role, d], i) => (
+          <div key={i} className="card-surface p-6">
+            <img
+              src={`https://picsum.photos/seed/team${i}/200/200`}
+              alt=""
+              className={`w-16 h-16 rounded-full object-cover mb-4 ring-4 ${rings[i % rings.length]}`}
+            />
+            <h4 className="font-bold text-navy">{role}</h4>
+            <p className="text-gray-600 text-sm mt-1.5 leading-relaxed">{d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+===== ./src/pages/Certifications.jsx =====
+import { ShieldCheck, GraduationCap, FileCheck2 } from "lucide-react";
+
+export default function Certifications() {
+  const items = [
+    { t: "Electrical safety compliance", d: "Work carried out to recognised national electrical safety standards.", icon: ShieldCheck, tile: "icon-tile-sky" },
+    { t: "Vendor-trained technicians", d: "Staff trained on the PLC and control brands we install and service.", icon: GraduationCap, tile: "icon-tile-amber" },
+    { t: "Insured & licensed", d: "Fully licensed to operate as an electrical and automation contractor.", icon: FileCheck2, tile: "icon-tile-teal" },
+  ];
+  return (
+    <section className="container-page section-pad-sm">
+      <p className="tag-chip mb-3"><span className="tag-dot" /> Trust &amp; compliance</p>
+      <h1 className="text-3xl font-bold text-navy mb-4">Certifications</h1>
+      <div className="relative rounded-2xl overflow-hidden shadow-soft mb-12">
+        <img src="/certifications-hero.png" alt="Panel inspection" className="w-full h-56 object-cover" />
+      </div>
+      <div className="grid md:grid-cols-3 gap-6">
+        {items.map((it) => (
+          <div key={it.t} className="card-surface p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 shadow-soft ${it.tile}`}>
+                <it.icon className="text-white" size={20} />
+              </div>
+              <h4 className="font-bold text-navy">{it.t}</h4>
+            </div>
+            <p className="text-gray-600 text-sm mt-2">{it.d}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+===== ./src/pages/Contact.jsx =====
+import { Phone, Mail, MapPin } from "lucide-react";
+import { CONTACT_PHONE, CONTACT_EMAIL } from "../data";
+import WhatsAppButton from "../components/WhatsAppButton";
+import SectionHeading from "../components/ui/SectionHeading";
+
+export default function Contact() {
+  return (
+    <section className="relative overflow-hidden">
+        <div className="absolute inset-0 blueprint-grid blueprint-fade pointer-events-none" />
+      <div className="glow-orb w-96 h-96 -top-32 right-0 opacity-[0.10]" style={{ background: "#1a63d6" }} />
+      <div className="max-w-4xl mx-auto relative section-pad-sm">
+        <div className="px-6">
+          <SectionHeading eyebrow="Get in touch" title="Let's talk about your system" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="glass-panel rounded-xl p-6 space-y-5">
+              <a href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`} className="flex items-center gap-3 text-navy">
+                <span className="w-9 h-9 rounded-xl icon-tile-sky shadow-soft flex items-center justify-center shrink-0"><Phone className="text-white" size={16} /></span>
+                {CONTACT_PHONE}
+              </a>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center gap-3 text-navy break-all">
+                <span className="w-9 h-9 rounded-xl icon-tile-amber shadow-soft flex items-center justify-center shrink-0"><Mail className="text-white" size={16} /></span>
+                {CONTACT_EMAIL}
+              </a>
+              <div className="flex items-center gap-3 text-navy">
+                <span className="w-9 h-9 rounded-xl icon-tile-teal shadow-soft flex items-center justify-center shrink-0"><MapPin className="text-white" size={16} /></span>
+                Serving clients across Kenya
+              </div>
+              <div className="pt-2"><WhatsAppButton full /></div>
+            </div>
+            <div className="bg-white border border-line rounded-xl shadow-soft p-6 space-y-4">
+              <input placeholder="Your name" className="w-full border border-line rounded-xl px-4 py-3 text-sm text-navy placeholder:text-gray-400 focus:outline-none focus:border-brand" />
+              <input placeholder="Phone or email" className="w-full border border-line rounded-xl px-4 py-3 text-sm text-navy placeholder:text-gray-400 focus:outline-none focus:border-brand" />
+              <textarea placeholder="What do you need help with?" rows={4} className="w-full border border-line rounded-xl px-4 py-3 text-sm text-navy placeholder:text-gray-400 focus:outline-none focus:border-brand" />
+              <button className="btn-primary w-full justify-center">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+===== ./src/components/sections/Hero.jsx =====
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+
+const slides = [
+  {
+    image: "/hero-panel.jpg",
+    tag: "Advanced Automation Systems · Kenya",
+    heading: "Engineering,",
+    highlight: "Delivered.",
+    desc: "Electrical installations, instrumentation & full automation across Kenya — certified engineers, zero excuses.",
+  },
+  {
+    image: "/hero-pcb.jpg",
+    tag: "Precision Instrumentation",
+    heading: "Every Signal,",
+    highlight: "Accounted For.",
+    desc: "From PCB-level diagnostics to full control system builds — precision engineered, thoroughly tested.",
+  },
+  {
+    image: "/hero-control.jpg",
+    tag: "24/7 Emergency Response",
+    heading: "Downtime,",
+    highlight: "Eliminated.",
+    desc: "Fast turnaround on call-outs and installations so your production line never stalls.",
+  },
+];
+
+export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    slides.forEach((s) => {
+      const img = new Image();
+      img.src = s.image;
+    });
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const slide = slides[index];
+
+  return (
+    <section className="relative overflow-hidden" style={{ height: "calc(100svh - 72px)" }}>
+
+      <div className="absolute inset-0">
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={slide.image + index}
+            src={slide.image}
+            alt="AAS industrial automation equipment"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 60%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(14,42,71,0.65) 0%, rgba(14,42,71,0.45) 40%, rgba(14,42,71,0.2) 70%, rgba(14,42,71,0.08) 100%)",
+          }}
+        />
+        <div
+          className="hidden lg:block absolute inset-0"
+          style={{
+            background: "linear-gradient(to right, rgba(14,42,71,0.55) 0%, rgba(14,42,71,0.25) 45%, rgba(14,42,71,0) 70%)",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 h-full flex flex-col container-page px-4 lg:px-8 pt-3 pb-3 lg:pt-6 lg:pb-6">
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex-shrink-0 flex justify-between lg:justify-start lg:gap-3"
+        >
+          {["Certified & Compliant", "ISO-Aligned", "24/7 Support"].map((b) => (
+            <span
+              key={b}
+              className="flex items-center gap-1 bg-black/50 border border-white/20 text-white font-semibold px-2 py-0.5 lg:px-3 lg:py-1 rounded-full text-[10px] lg:text-xs"
+            >
+              <CheckCircle2 size={11} className="lg:w-3.5 lg:h-3.5" style={{ color: "var(--color-sky)" }} />
+              {b}
+            </span>
+          ))}
+        </motion.div>
+
+        <div className="flex-1" />
+
+        <div
+          className="flex-shrink-0 flex flex-col gap-2 lg:gap-4 rounded-2xl lg:max-w-2xl"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(14,42,71,0.0) 0%, rgba(14,42,71,0.55) 15%, rgba(14,42,71,0.7) 85%, rgba(14,42,71,0.0) 100%)",
+            padding: "14px 10px",
+            margin: "-14px -10px",
+          }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-2 lg:gap-4"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-5 lg:w-8 h-[2px] flex-shrink-0" style={{ background: "var(--color-brand)" }} />
+                <span
+                  className="font-bold uppercase tracking-widest text-[9px] lg:text-sm"
+                  style={{ color: "var(--color-sky)" }}
+                >
+                  {slide.tag}
+                </span>
+              </div>
+
+              <h1
+                className="font-extrabold text-white tracking-tight leading-none"
+                style={{ fontSize: "clamp(1.8rem, 8vw, 2.8rem)" }}
+              >
+                <span className="lg:hidden">{slide.heading}<br /><span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span></span>
+                <span className="hidden lg:block lg:text-6xl xl:text-7xl">
+                  {slide.heading}<br />
+                  <span style={{ color: "var(--color-sky)" }}>{slide.highlight}</span>
+                </span>
+              </h1>
+
+              <p className="text-gray-300 leading-snug text-[11px] lg:text-lg lg:max-w-xl">
+                {slide.desc}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="flex gap-2 lg:gap-4 lg:max-w-md">
+            <Link
+              to="/services"
+              className="flex-1 flex items-center justify-center gap-1 lg:gap-2 text-white font-bold rounded-lg text-[12px] lg:text-base py-[9px] lg:py-3.5"
+              style={{ background: "var(--color-brand)" }}
+            >
+              Free Quote <ArrowRight size={12} className="lg:w-5 lg:h-5" />
+            </Link>
+            <a
+              href="tel:+254794726207"
+              className="flex-1 flex items-center justify-center gap-1 lg:gap-2 border border-white/30 bg-white/10 text-white font-semibold rounded-lg text-[12px] lg:text-base py-[9px] lg:py-3.5"
+            >
+              <Phone size={12} className="lg:w-5 lg:h-5" /> Call Now
+            </a>
+          </div>
+
+          <div className="grid grid-cols-4 rounded-xl overflow-hidden border border-white/10 lg:max-w-lg">
+            {[
+              { v: "4", l: "Solutions" },
+              { v: "24/7", l: "Response" },
+              { v: "100%", l: "Coverage" },
+              { v: "Same-Day", l: "Turnaround" },
+            ].map((s, i) => (
+              <div
+                key={s.l}
+                className={`text-center py-1.5 lg:py-3 ${i % 2 === 0 ? "bg-white/10" : "bg-white/5"}`}
+              >
+                <p className="font-extrabold text-white leading-none text-[14px] lg:text-xl">
+                  {s.v}
+                </p>
+                <p className="text-gray-400 uppercase tracking-wide mt-0.5 text-[8px] lg:text-xs">
+                  {s.l}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center lg:justify-start gap-1.5 pt-1">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className="rounded-full transition-all"
+                style={{
+                  width: i === index ? "18px" : "6px",
+                  height: "6px",
+                  background: i === index ? "var(--color-sky)" : "rgba(255,255,255,0.3)",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="flex-1" />
+      </div>
+    </section>
+  );
+}
+
+===== ./src/components/sections/WhyChooseUs.jsx =====
+import { ShieldCheck, Zap, Award, Users, Headset, MapPin, Wallet } from "lucide-react";
+
+const ACCENT = "#2563eb";
+
+const points = [
+  { icon: ShieldCheck, title: "Certified & Compliant", desc: "Electrical work delivered to recognised national safety standards, backed by rigorous audits and design reviews." },
+  { icon: Zap, title: "Fast Turnaround", desc: "Same-day quotes and responsive project scheduling, so your timeline never stalls." },
+  { icon: Award, title: "Proven Expertise", desc: "Deep experience across manufacturing, water treatment, cold chain, and industrial automation." },
+  { icon: Users, title: "Client-First Support", desc: "Direct access to our engineering team from first quote through to project handover." },
+  { icon: Headset, title: "24/7 Support", desc: "Round-the-clock response for urgent faults and emergency callouts, whenever they arise." },
+  { icon: MapPin, title: "Nationwide Coverage", desc: "On-site teams and support reaching clients across Kenya, not just in major towns." },
+  { icon: Wallet, title: "Transparent Pricing", desc: "Clear, upfront quotes with no hidden costs, so you know exactly what you're paying for." },
+];
+
+export default function WhyChooseUs() {
+  return (
+    <section className="container-page section-pad-sm relative overflow-hidden">
+      <div
+        className="absolute -top-10 left-1/4 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%)" }}
+      />
+      <div
+        className="absolute bottom-0 right-1/4 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.12), transparent 70%)" }}
+      />
+      <div className="mb-10 max-w-xl">
+        <p className="tag-chip mb-3"><span className="tag-dot" /> Why AAS</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-navy">Why choose us</h2>
+      </div>
+
+      <div className="space-y-5 max-w-2xl">
+        {points.map((p, i) => {
+          const accent = ACCENT;
+          return (
+            <div
+              key={p.title}
+              className="relative flex items-center gap-5 rounded-2xl p-5 animate-fade-up backdrop-blur-xl"
+              style={{
+                animationDelay: `${i * 100}ms`,
+                background: "rgba(255,255,255,0.55)",
+                border: "1px solid rgba(255,255,255,0.6)",
+                boxShadow: "0 20px 45px -20px rgba(10,26,53,0.35), inset 0 1px 0 rgba(255,255,255,0.6)",
+                borderLeft: `4px solid ${accent}`,
+              }}
+            >
+              <div
+                className="relative w-14 h-14 rounded-full flex items-center justify-center shrink-0"
+                style={{
+                  background: accent,
+                  boxShadow: `0 0 20px 2px ${accent}55`,
+                }}
+              >
+                <p.icon size={26} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-navy text-lg">{p.title}</h3>
+                <p className="text-gray-600 text-sm mt-1 leading-relaxed">{p.desc}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+===== ./src/components/sections/StatsStrip.jsx =====
+const stats = [
+  { n: "4", label: "Core Solution Areas", color: "var(--color-brand)" },
+  { n: "24/7", label: "Emergency Response", color: "var(--color-teal)" },
+  { n: "100%", label: "Kenya-Wide Coverage", color: "var(--color-violet)" },
+  { n: "Same-Day", label: "Quote Turnaround", color: "var(--color-sky)" },
+];
+
+export default function StatsStrip() {
+  return (
+    <section className="container-page">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        {stats.map((s) => (
+          <div key={s.label} className="card-surface p-6 text-center">
+            <div className="text-2xl md:text-3xl font-bold" style={{ color: s.color }}>{s.n}</div>
+            <div className="text-xs md:text-sm text-gray-500 mt-1.5">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+===== ./src/components/sections/SectorsServed.jsx =====
+import { Factory } from "lucide-react";
+import { SECTORS } from "../../data";
+
+export default function SectorsServed() {
+  return (
+    <section className="container-page section-pad-sm">
+      <div className="mb-10">
+        <p className="tag-chip mb-3"><span className="tag-dot" /> Who we serve</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-navy">Sectors we serve</h2>
+      </div>
+      <div className="flex flex-wrap gap-3">
+        {SECTORS.map((sector, i) => (
+          <div
+            key={sector}
+            className="glass-card px-5 py-3 rounded-full flex items-center gap-2 animate-fade-up"
+            style={{ animationDelay: `${i * 60}ms` }}
+          >
+            <Factory size={16} className="text-brand" />
+            <span className="text-sm font-medium text-navy">{sector}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+

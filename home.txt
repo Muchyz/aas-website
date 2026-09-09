@@ -1,0 +1,16 @@
+    Advanced Automation Systems | Industrial Electrical, Automation & Instrumentation Kenya
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Advanced Automation Systems",
+      "image": "https://www.advanced-automation-systems.com/logo.png",
+      "url": "https://www.advanced-automation-systems.com/",
+      "telephone": "+254794726207",
+      "email": "advancedautomation.ltd@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "KE"
+      },
+      "areaServed": "Kenya",
+      "description": "Electrical installations, control & automation, SCADA, instrumentation, and VFD solutions for industrial clients across Kenya."
+    }
