@@ -322,7 +322,7 @@ export default function About() {
             <span className="text-sm text-white/60">Tap to download</span>
             <a
               href="/company-profile.pdf"
-              download
+              download="Advanced Automation Systems - Company Profile.pdf"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-transform hover:scale-105"
               style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff" }}
             >
